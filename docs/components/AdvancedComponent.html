@@ -1,0 +1,1667 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/Vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AdvancedComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/settings/terminal/advanced/advanced.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ng-xterm-advanced-settings</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			margin-right: 5px;
+		}
+		.terminal-type { width: 250px}
+		.form-check-input { margin-left: 10px}
+	</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./advanced.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#advancedTerminalControlsForm">advancedTerminalControlsForm</a>
+                            </li>
+                            <li>
+                                <a href="#customWindowTitle">customWindowTitle</a>
+                            </li>
+                            <li>
+                                <a href="#linesOfScrollback">linesOfScrollback</a>
+                            </li>
+                            <li>
+                                <a href="#ptyColumns">ptyColumns</a>
+                            </li>
+                            <li>
+                                <a href="#ptyRows">ptyRows</a>
+                            </li>
+                            <li>
+                                <a href="#rendererType">rendererType</a>
+                            </li>
+                            <li>
+                                <a href="#rendererTypes">rendererTypes</a>
+                            </li>
+                            <li>
+                                <a href="#showTooltips">showTooltips</a>
+                            </li>
+                            <li>
+                                <a href="#terminalType">terminalType</a>
+                            </li>
+                            <li>
+                                <a href="#terminalTypes">terminalTypes</a>
+                            </li>
+                            <li>
+                                <a href="#useAntiAliasedFonts">useAntiAliasedFonts</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setAntiAlias">setAntiAlias</a>
+                            </li>
+                            <li>
+                                <a href="#setCustomTitle">setCustomTitle</a>
+                            </li>
+                            <li>
+                                <a href="#setLinesOfScrollback">setLinesOfScrollback</a>
+                            </li>
+                            <li>
+                                <a href="#setPTYCols">setPTYCols</a>
+                            </li>
+                            <li>
+                                <a href="#setPTYRows">setPTYRows</a>
+                            </li>
+                            <li>
+                                <a href="#setTerminalRenderer">setTerminalRenderer</a>
+                            </li>
+                            <li>
+                                <a href="#setTerminalType">setTerminalType</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(settingsService: <a href="../injectables/SettingsService.html">SettingsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>settingsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SettingsService.html" target="_self" >SettingsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setAntiAlias"></a>
+                    <span class="name">
+                        <b>
+                            setAntiAlias
+                        </b>
+                        <a href="#setAntiAlias"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setAntiAlias(shouldAntiAliasFonts: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>shouldAntiAliasFonts</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCustomTitle"></a>
+                    <span class="name">
+                        <b>
+                            setCustomTitle
+                        </b>
+                        <a href="#setCustomTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setCustomTitle(customTitle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Override the default terminal title (the title of the current process).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>customTitle</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the custom title to be displayed instead
+of the terminal session default</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLinesOfScrollback"></a>
+                    <span class="name">
+                        <b>
+                            setLinesOfScrollback
+                        </b>
+                        <a href="#setLinesOfScrollback"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setLinesOfScrollback(linesOfScrollback: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the amount of allowed terminal scrollback</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>linesOfScrollback</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the amount of allowed terminal scrollback.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPTYCols"></a>
+                    <span class="name">
+                        <b>
+                            setPTYCols
+                        </b>
+                        <a href="#setPTYCols"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setPTYCols(colsUsedByPty: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:181</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the number of columns used by the pty session</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colsUsedByPty</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the number of cols used by the pty session</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPTYRows"></a>
+                    <span class="name">
+                        <b>
+                            setPTYRows
+                        </b>
+                        <a href="#setPTYRows"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setPTYRows(rowsUsedByPty: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the number of rows used by the pty session</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rowsUsedByPty</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the number of rows used by the pty session</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTerminalRenderer"></a>
+                    <span class="name">
+                        <b>
+                            setTerminalRenderer
+                        </b>
+                        <a href="#setTerminalRenderer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setTerminalRenderer(rendererType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:148</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the terminal renderer.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rendererType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>what terminal renderer will being used.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTerminalType"></a>
+                    <span class="name">
+                        <b>
+                            setTerminalType
+                        </b>
+                        <a href="#setTerminalType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setTerminalType(terminalType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the type of terminal session.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>terminalType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>what terminal session will be used.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="advancedTerminalControlsForm"></a>
+                        <span class="name">
+                            <b>
+                            advancedTerminalControlsForm</b>
+                            <a href="#advancedTerminalControlsForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A FormGroup variable which is used to configure the advance settings form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customWindowTitle"></a>
+                        <span class="name">
+                            <b>
+                            customWindowTitle</b>
+                            <a href="#customWindowTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The custom terminal title which will overwrite the default
+of the current process title </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="linesOfScrollback"></a>
+                        <span class="name">
+                            <b>
+                            linesOfScrollback</b>
+                            <a href="#linesOfScrollback"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The number of lines the terminal will allow for scrolling back through its text buffer. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ptyColumns"></a>
+                        <span class="name">
+                            <b>
+                            ptyColumns</b>
+                            <a href="#ptyColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Number of columns used by the underlying terminal and pty/tty </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ptyRows"></a>
+                        <span class="name">
+                            <b>
+                            ptyRows</b>
+                            <a href="#ptyRows"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Number of rows used by the underlying terminal and pty/tty </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rendererType"></a>
+                        <span class="name">
+                            <b>
+                            rendererType</b>
+                            <a href="#rendererType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A string value used to hold the preferred terminal renderer
+value which was retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rendererTypes"></a>
+                        <span class="name">
+                            <b>
+                            rendererTypes</b>
+                            <a href="#rendererTypes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;dom&quot;, &quot;canvas&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>What HTML renderer is used by the terminal.
+1: Canvas, not always available, but much faster than the DOM.
+2: DOM, the automatic fallback when canvas is not available</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTooltips"></a>
+                        <span class="name">
+                            <b>
+                            showTooltips</b>
+                            <a href="#showTooltips"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A boolean value used to determine if tooltips should be shown
+when the user hovers over a setting </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalType"></a>
+                        <span class="name">
+                            <b>
+                            terminalType</b>
+                            <a href="#terminalType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The type of terminal session.
+1: vt100
+2: xterm-256color
+3: xterm-16color
+4: xterm</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalTypes"></a>
+                        <span class="name">
+                            <b>
+                            terminalTypes</b>
+                            <a href="#terminalTypes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;xterm&quot;, &quot;xterm-256color&quot;, &quot;xterm-new&quot;, &quot;vt100&quot;, &quot;xterm-16color&quot;, &quot;asni&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>What types of terminal sessions are supported by Mac OS </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="useAntiAliasedFonts"></a>
+                        <span class="name">
+                            <b>
+                            useAntiAliasedFonts</b>
+                            <a href="#useAntiAliasedFonts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/settings/terminal/advanced/advanced.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A boolean value used to determine if the application fonts
+should be antiAliased </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;
+import { FormControl, FormGroup } from &quot;@angular/forms&quot;
+import { SettingsService } from &quot;@shared/services&quot;
+import { AppSettings } from &quot;@shared/utils&quot;
+
+@Component({
+	selector: &quot;ng-xterm-advanced-settings&quot;,
+	templateUrl: &quot;./advanced.component.html&quot;,
+	styles: [ &#x60;
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			margin-right: 5px;
+		}
+		.terminal-type { width: 250px}
+		.form-check-input { margin-left: 10px}
+	&#x60; ]
+})
+
+/**
+ * The form which modifies any settings related to the &quot;advanced&quot; settings of the
+ * underlying terminal and pty/tty. These settings are defined as &quot;advanced&quot;
+ * because the average user will likely not change the defaults. But I wanted
+ * to make NG-Xterm as customizable as possible, so I at least wanted to
+ * provide the option to tweak &quot;all&quot; levels of settings.
+ * */
+
+export class AdvancedComponent implements OnInit {
+
+	/** A FormGroup variable which is used to configure the advance settings form */
+	advancedTerminalControlsForm: FormGroup
+
+	/** Number of columns used by the underlying terminal and pty/tty */
+	ptyColumns: number
+
+	/** Number of rows used by the underlying terminal and pty/tty */
+	ptyRows: number
+
+	/** The number of lines the terminal will allow for scrolling back through its text buffer. */
+	linesOfScrollback: number
+
+	/** The custom terminal title which will overwrite the default
+	 * of the current process title */
+	customWindowTitle: string
+
+	/**
+	 * What HTML renderer is used by the terminal.
+	 * 1: Canvas, not always available, but much faster than the DOM.
+	 * 2: DOM, the automatic fallback when canvas is not available
+	 * */
+	rendererTypes &#x3D; [&quot;dom&quot;, &quot;canvas&quot;]
+
+	/**
+	 * A string value used to hold the preferred terminal renderer
+	 * value which was retrieved from the settings store.
+	 * */
+	rendererType: string
+
+	/** What types of terminal sessions are supported by Mac OS */
+	terminalTypes &#x3D; [&quot;xterm&quot;, &quot;xterm-256color&quot;, &quot;xterm-new&quot;, &quot;vt100&quot;, &quot;xterm-16color&quot;, &quot;asni&quot;]
+
+	/**
+	 * The type of terminal session.
+	 * 1: vt100
+	 * 2: xterm-256color
+	 * 3: xterm-16color
+	 * 4: xterm
+	 * */
+	terminalType: string
+
+	/** A boolean value used to determine if tooltips should be shown
+	 * when the user hovers over a setting */
+	showTooltips: boolean
+
+	/** A boolean value used to determine if the application fonts
+	 * should be antiAliased */
+	useAntiAliasedFonts: boolean
+
+	constructor(private readonly settingsService: SettingsService) {}
+
+
+	ngOnInit() {
+		// retrieve the renderer type from the settings store.
+		this.rendererType &#x3D; this.settingsService.getItem(AppSettings.TERM_RENDERER) as string
+
+		// retrieve the custom window title from the settings store.
+		this.customWindowTitle &#x3D; this.settingsService.getItem(AppSettings.CUSTOM_TERM_TITLE) as string
+
+		// retrieve the terminal session type from the settings store.
+		this.terminalType &#x3D; this.settingsService.getItem(AppSettings.TERM_TYPE) as string
+
+		// retrieve the pty/terminal columns value from the settings store.
+		this.ptyColumns &#x3D; +this.settingsService.getItem(AppSettings.PTY_COLS)
+
+		// retrieve the pty/terminal rows value from the settings store.
+		this.ptyRows &#x3D;  +this.settingsService.getItem(AppSettings.PTY_ROWS)
+
+		// retrieve the allowed lines of scrollback from the settings store.
+		this.linesOfScrollback &#x3D; +this.settingsService.getItem(AppSettings.TERM_SCROLLBACK)
+
+		// retrieve the value for using or not using anti aliased fonts
+		this.useAntiAliasedFonts &#x3D; this.settingsService.getItem(AppSettings.ANTI_ALIAS_FONTS) as boolean
+
+		// retrieve the value for showing or not showing tooltips
+		this.showTooltips &#x3D; this.settingsService.getItem(AppSettings.SHOULD_TOOL_TIPS_SHOW) as boolean
+
+		if(this.useAntiAliasedFonts &#x3D;&#x3D;&#x3D; true) {
+			document.body.style.setProperty(&quot;-webkit-font-smoothing&quot;, &quot;subpixel-antialiased&quot;)
+		}
+
+		// configure the settings form
+		this.advancedTerminalControlsForm &#x3D; new FormGroup({
+			// an html select containing the different terminal types
+			&quot;terminal-type&quot;: new FormControl(this.terminalType),
+
+			// an html select containing the  terminal renderers
+			&quot;renderer-type&quot;: new FormControl(this.rendererType),
+
+			// an html number input used to configure the terminal scrollback
+			&quot;lines-of-scrollback&quot;: new FormControl(this.linesOfScrollback),
+
+			// an html text input used to configure the custom window title
+			&quot;custom-title&quot;: new FormControl(this.customWindowTitle),
+
+			// an html number input used to configure the number of pty/terminal columns
+			&quot;pty-rows&quot;: new FormControl(this.ptyRows),
+
+			// an html number input used to configure the number of pty/terminal rows
+			&quot;pty-cols&quot;: new FormControl(this.ptyColumns),
+
+			&quot;anti-alias&quot;: new FormControl(this.useAntiAliasedFonts),
+		})
+	}
+
+	/**
+	 * Set the type of terminal session.
+	* @param {string} terminalType what terminal session will be used.
+	*/
+	setTerminalType(terminalType: string) {
+		this.settingsService.setItem(AppSettings.TERM_TYPE, terminalType)
+	}
+
+	/**
+	 * Set the terminal renderer.
+	 * @param {string} rendererType what terminal renderer will being used.
+	 */
+	setTerminalRenderer(rendererType: string) {
+		this.settingsService.setItem(AppSettings.TERM_RENDERER, rendererType)
+	}
+
+	/**
+	 * Set the amount of allowed terminal scrollback
+	 * @param {number} linesOfScrollback the amount of allowed terminal scrollback.
+	 */
+	setLinesOfScrollback(linesOfScrollback: number) {
+		this.settingsService.setItem(AppSettings.TERM_SCROLLBACK, linesOfScrollback)
+	}
+
+	/**
+	 * Override the default terminal title (the title of the current process).
+	 * @param {string} customTitle the custom title to be displayed instead
+	 * of the terminal session default
+	 */
+	setCustomTitle(customTitle: string) {
+		this.settingsService.setItem(AppSettings.CUSTOM_TERM_TITLE, customTitle)
+	}
+
+	/**
+	 * Set the number of rows used by the pty session
+	 * @param {number} rowsUsedByPty the number of rows used by the pty session
+	 */
+	setPTYRows(rowsUsedByPty: number) {
+		this.settingsService.setItem(AppSettings.PTY_ROWS, rowsUsedByPty)
+	}
+
+	/**
+	 * Set the number of columns used by the pty session
+	 * @param {number} colsUsedByPty the number of cols used by the pty session
+	 */
+	setPTYCols(colsUsedByPty: number) {
+		this.settingsService.setItem(AppSettings.PTY_COLS, colsUsedByPty)
+	}
+
+
+	setAntiAlias(shouldAntiAliasFonts: boolean) {
+		this.settingsService.setItem(AppSettings.ANTI_ALIAS_FONTS, shouldAntiAliasFonts)
+		if(shouldAntiAliasFonts &#x3D;&#x3D; true) {
+			document.body.style.setProperty(&quot;-webkit-font-smoothing&quot;, &quot;subpixel-antialiased&quot;)
+		}
+	}
+
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;form-group&quot; [formGroup]&#x3D;&quot;advancedTerminalControlsForm&quot;&gt;
+
+	&lt;div class&#x3D;&quot;row row-cols-3 mb-3 justify-content-evenly&quot;&gt;
+		&lt;!-- terminal renderer --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-box&quot;&gt;&lt;/i&gt;
+			&lt;select class&#x3D;&quot;form-control text-white border-secondary form-control-sm text-white&quot;
+			        (change)&#x3D;&quot;setTerminalRenderer(advancedTerminalControlsForm.get(&#x27;renderer-type&#x27;).value)&quot;
+			        [value]&#x3D;&quot;rendererTypes&quot;
+			        ngbTooltip&#x3D;&quot;Which renderer the terminal will use. Canvas is faster, but not always available. In this case, the DOM is the automatic fallback&quot;
+			        formControlName&#x3D;&quot;renderer-type&quot;
+			&gt;
+				&lt;option [ngValue]&#x3D;&quot;r&quot;
+				        *ngFor&#x3D;&quot;let r of rendererTypes&quot;&gt;
+					{{ r }}
+				&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+
+		&lt;!-- terminal type --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;select class&#x3D;&quot;form-control form-control-sm border-secondary text-white terminal-type&quot;
+			        [value]&#x3D;&quot;terminalTypes&quot;
+			        (change)&#x3D;&quot;setTerminalType(advancedTerminalControlsForm.get(&#x27;terminal-type&#x27;).value)&quot;
+			        formControlName&#x3D;&quot;terminal-type&quot;
+			        ngbTooltip&#x3D;&quot;Sets the type of terminal session used the underlying xterm&quot;
+			&gt;
+				&lt;option [ngValue]&#x3D;&quot;terminal&quot;
+				        *ngFor&#x3D;&quot;let terminal of terminalTypes&quot;&gt;
+					{{ terminal }}
+				&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+
+		&lt;!-- customTitle --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-text-paragraph&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setCustomTitle(advancedTerminalControlsForm.get(&#x27;custom-title&#x27;).value)&quot;
+				formControlName&#x3D;&quot;custom-title&quot;
+				[value]&#x3D;&quot;customWindowTitle&quot;
+				placeholder&#x3D;&quot;custom title&quot;
+				type&#x3D;&quot;text&quot;
+				ngbTooltip&#x3D;&quot;Sets the custom terminal title This custom title will override the default process title displayed by the shell session&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;row row-cols-3 justify-content-evenly&quot;&gt;
+		&lt;!-- scrollback  --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-arrow-counterclockwise&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setLinesOfScrollback(advancedTerminalControlsForm.get(&#x27;lines-of-scrollback&#x27;).value)&quot;
+				formControlName&#x3D;&quot;lines-of-scrollback&quot;
+				ngbTooltip&#x3D;&quot;Sets the number of lines the terminal will allow for scrollback&quot;
+				[value]&#x3D;&quot;linesOfScrollback&quot;
+				type&#x3D;&quot;number&quot;
+				step&#x3D;&quot;1&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white w-50&quot;&gt;
+		&lt;/div&gt;
+		&lt;!-- pty cols --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-layout-three-columns&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setPTYCols(advancedTerminalControlsForm.get(&#x27;pty-cols&#x27;).value)&quot;
+				formControlName&#x3D;&quot;pty-cols&quot;
+				[value]&#x3D;&quot;ptyColumns&quot;
+				type&#x3D;&quot;number&quot;
+				ngbTooltip&#x3D;&quot;Sets the number of columns used by the pty/tty&quot;
+				step&#x3D;&quot;1&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white h-50&quot;&gt;
+		&lt;/div&gt;
+		&lt;!-- pty rows --&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-terminal-fill&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-grid-3x2&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setPTYRows(advancedTerminalControlsForm.get(&#x27;pty-rows&#x27;).value)&quot;
+				formControlName&#x3D;&quot;pty-rows&quot;
+				[value]&#x3D;&quot;ptyRows&quot;
+				ngbTooltip&#x3D;&quot;Sets the number of rows used by the pty/tty&quot;
+				type&#x3D;&quot;number&quot;
+				step&#x3D;&quot;1&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white h-50&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+		&lt;!-- anti alias --&gt;
+		&lt;div class&#x3D;&quot;form-check&quot;&gt;
+			&lt;input class&#x3D;&quot;form-check-input&quot;
+			       id&#x3D;&quot;anti-alias&quot;
+			       formControlName&#x3D;&quot;anti-alias&quot;
+			       type&#x3D;&quot;checkbox&quot;
+			       ngbTooltip&#x3D;&quot;&quot;
+			       [value]&#x3D;&quot;showTooltips&quot;
+			       (change)&#x3D;&quot;setAntiAlias(advancedTerminalControlsForm.get(&#x27;anti-alias&#x27;).value)&quot;
+			&gt;
+			&lt;label class&#x3D;&quot;form-label text-white&quot;&gt;Anti-aliased Font&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			margin-right: 5px;
+		}
+		.terminal-type { width: 250px}
+		.form-check-input { margin-left: 10px}
+	
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="form-group" [formGroup]="advancedTerminalControlsForm">	<div class="row row-cols-3 mb-3 justify-content-evenly">		<!-- terminal renderer -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<i class="bi bi-box"></i>			<select class="form-control text-white border-secondary form-control-sm text-white"			        (change)="setTerminalRenderer(advancedTerminalControlsForm.get(\'renderer-type\').value)"			        [value]="rendererTypes"			        ngbTooltip="Which renderer the terminal will use. Canvas is faster, but not always available. In this case, the DOM is the automatic fallback"			        formControlName="renderer-type"			>				<option [ngValue]="r"				        *ngFor="let r of rendererTypes">					{{ r }}				</option>			</select>		</div>		<!-- terminal type -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<select class="form-control form-control-sm border-secondary text-white terminal-type"			        [value]="terminalTypes"			        (change)="setTerminalType(advancedTerminalControlsForm.get(\'terminal-type\').value)"			        formControlName="terminal-type"			        ngbTooltip="Sets the type of terminal session used the underlying xterm"			>				<option [ngValue]="terminal"				        *ngFor="let terminal of terminalTypes">					{{ terminal }}				</option>			</select>		</div>		<!-- customTitle -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<i class="bi bi-text-paragraph"></i>			<input				(change)="setCustomTitle(advancedTerminalControlsForm.get(\'custom-title\').value)"				formControlName="custom-title"				[value]="customWindowTitle"				placeholder="custom title"				type="text"				ngbTooltip="Sets the custom terminal title This custom title will override the default process title displayed by the shell session"				class="form-control form-control-sm bg-dark border-secondary text-white">		</div>	</div>	<div class="row row-cols-3 justify-content-evenly">		<!-- scrollback  -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<i class="bi bi-arrow-counterclockwise"></i>			<input				(change)="setLinesOfScrollback(advancedTerminalControlsForm.get(\'lines-of-scrollback\').value)"				formControlName="lines-of-scrollback"				ngbTooltip="Sets the number of lines the terminal will allow for scrollback"				[value]="linesOfScrollback"				type="number"				step="1"				class="form-control form-control-sm bg-dark border-secondary text-white w-50">		</div>		<!-- pty cols -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<i class="bi bi-layout-three-columns"></i>			<input				(change)="setPTYCols(advancedTerminalControlsForm.get(\'pty-cols\').value)"				formControlName="pty-cols"				[value]="ptyColumns"				type="number"				ngbTooltip="Sets the number of columns used by the pty/tty"				step="1"				class="form-control form-control-sm bg-dark border-secondary text-white h-50">		</div>		<!-- pty rows -->		<div class="col d-flex">			<i class="bi bi-terminal-fill"></i>			<i class="bi bi-grid-3x2"></i>			<input				(change)="setPTYRows(advancedTerminalControlsForm.get(\'pty-rows\').value)"				formControlName="pty-rows"				[value]="ptyRows"				ngbTooltip="Sets the number of rows used by the pty/tty"				type="number"				step="1"				class="form-control form-control-sm bg-dark border-secondary text-white h-50">		</div>	</div>	<div class="row mt-3">		<!-- anti alias -->		<div class="form-check">			<input class="form-check-input"			       id="anti-alias"			       formControlName="anti-alias"			       type="checkbox"			       ngbTooltip=""			       [value]="showTooltips"			       (change)="setAntiAlias(advancedTerminalControlsForm.get(\'anti-alias\').value)"			>			<label class="form-label text-white">Anti-aliased Font</label>		</div>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AdvancedComponent', 'selector': 'ng-xterm-advanced-settings'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppTopbarComponent', 'selector': 'ng-xterm-app-topbar'},{'name': 'BackgroundComponent', 'selector': 'ng-xterm-background-settings'},{'name': 'CursorComponent', 'selector': 'ng-xterm-cursor-settings'},{'name': 'FontComponent', 'selector': 'ng-xterm-font-finder'},{'name': 'ForegroundComponent', 'selector': 'ng-xterm-foreground-settings'},{'name': 'SettingsComponent', 'selector': 'ng-xterm-settings'},{'name': 'ShellComponent', 'selector': 'ng-xterm-shell-settings'},{'name': 'SplitPanelComponent', 'selector': 'ng-xterm-split-panel'},{'name': 'TabsComponent', 'selector': 'ng-xterm-tabs'},{'name': 'TabSettingsComponent', 'selector': 'ng-xterm-tab-settings'},{'name': 'TaskListComponent', 'selector': 'ng-xterm-task-list'},{'name': 'TerminalComponent', 'selector': 'ng-xterm-terminal'},{'name': 'TopBarComponent', 'selector': 'ng-xterm-top-bar'},{'name': 'WindowControlsComponent', 'selector': 'ng-xterm-window-controls'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AdvancedComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AdvancedComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

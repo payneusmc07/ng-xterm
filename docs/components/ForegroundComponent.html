@@ -1,0 +1,1284 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/Vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ForegroundComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/settings/terminal/foreground/foreground.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ng-xterm-foreground-settings</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			color-adjust: exact;
+			color-rendering: optimizeQuality;
+			margin-right: 5px;
+		}
+
+		.form-control {
+			min-width: 50px;
+		}
+
+	</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./foreground.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fontColor">fontColor</a>
+                            </li>
+                            <li>
+                                <a href="#fontSize">fontSize</a>
+                            </li>
+                            <li>
+                                <a href="#fontStyle">fontStyle</a>
+                            </li>
+                            <li>
+                                <a href="#foregroundSettingForm">foregroundSettingForm</a>
+                            </li>
+                            <li>
+                                <a href="#letterSpacing">letterSpacing</a>
+                            </li>
+                            <li>
+                                <a href="#lineHeight">lineHeight</a>
+                            </li>
+                            <li>
+                                <a href="#selectionColor">selectionColor</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setFontColor">setFontColor</a>
+                            </li>
+                            <li>
+                                <a href="#setFontSize">setFontSize</a>
+                            </li>
+                            <li>
+                                <a href="#setLetterSpacing">setLetterSpacing</a>
+                            </li>
+                            <li>
+                                <a href="#setLineHeight">setLineHeight</a>
+                            </li>
+                            <li>
+                                <a href="#setSelectionColor">setSelectionColor</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(settingsService: <a href="../injectables/SettingsService.html">SettingsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>settingsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SettingsService.html" target="_self" >SettingsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFontColor"></a>
+                    <span class="name">
+                        <b>
+                            setFontColor
+                        </b>
+                        <a href="#setFontColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setFontColor(color: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the terminal font color.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>color</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the new terminal font color.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFontSize"></a>
+                    <span class="name">
+                        <b>
+                            setFontSize
+                        </b>
+                        <a href="#setFontSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setFontSize(size: number | string)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the terminal font size.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>size</td>
+                                    <td>
+                                            <code>number | string</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the size of the terminal font.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLetterSpacing"></a>
+                    <span class="name">
+                        <b>
+                            setLetterSpacing
+                        </b>
+                        <a href="#setLetterSpacing"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setLetterSpacing(spaceBetweenLetters: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the amount of space between letters.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>spaceBetweenLetters</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the amount of horizontal space between letters of the terminal buffer.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLineHeight"></a>
+                    <span class="name">
+                        <b>
+                            setLineHeight
+                        </b>
+                        <a href="#setLineHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setLineHeight(lineHeight: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the terminal line height.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lineHeight</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the amount of vertical space between lines of terminal text.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setSelectionColor"></a>
+                    <span class="name">
+                        <b>
+                            setSelectionColor
+                        </b>
+                        <a href="#setSelectionColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setSelectionColor(selectionColor: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:141</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the text selection color for the terminal.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>selectionColor</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the background color which will appear when terminal text is highlighted.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fontColor"></a>
+                        <span class="name">
+                            <b>
+                            fontColor</b>
+                            <a href="#fontColor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A string value used to hold the preferred terminal font value
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fontSize"></a>
+                        <span class="name">
+                            <b>
+                            fontSize</b>
+                            <a href="#fontSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to hold the preferred terminal font size value
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fontStyle"></a>
+                        <span class="name">
+                            <b>
+                            fontStyle</b>
+                            <a href="#fontStyle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to hold the preferred terminal font style
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="foregroundSettingForm"></a>
+                        <span class="name">
+                            <b>
+                            foregroundSettingForm</b>
+                            <a href="#foregroundSettingForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A FormGroup variable which is used to configure the font settings form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="letterSpacing"></a>
+                        <span class="name">
+                            <b>
+                            letterSpacing</b>
+                            <a href="#letterSpacing"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to hold the preferred terminal letter spacing value
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lineHeight"></a>
+                        <span class="name">
+                            <b>
+                            lineHeight</b>
+                            <a href="#lineHeight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to hold the preferred terminal line height value
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectionColor"></a>
+                        <span class="name">
+                            <b>
+                            selectionColor</b>
+                            <a href="#selectionColor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/settings/terminal/foreground/foreground.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to hold the preferred text selection color
+retrieved from the settings store.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;
+import { FormControl, FormGroup } from &quot;@angular/forms&quot;
+import { SettingsService } from &quot;@services/settings.service&quot;
+import { AppSettings } from &quot;@shared/utils/constants&quot;
+
+@Component({
+	selector: &quot;ng-xterm-foreground-settings&quot;,
+	templateUrl: &quot;./foreground.component.html&quot;,
+	styles: [&#x60;
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			color-adjust: exact;
+			color-rendering: optimizeQuality;
+			margin-right: 5px;
+		}
+
+		.form-control {
+			min-width: 50px;
+		}
+
+	&#x60;]
+})
+
+/** Customize the foreground of the terminal, and terminal tabs.*/
+export class ForegroundComponent implements OnInit {
+
+	/** A FormGroup variable which is used to configure the font settings form */
+	foregroundSettingForm: FormGroup
+
+	/**
+	 * A string value used to hold the preferred terminal font value
+	 * retrieved from the settings store.
+	 * */
+	fontColor: string
+
+	/**
+	 * A number value used to hold the preferred terminal font size value
+	 * retrieved from the settings store.
+	 * */
+	fontSize: number
+
+	/**
+	 * A number value used to hold the preferred terminal line height value
+	 * retrieved from the settings store.
+	 * */
+	lineHeight: number
+
+	/**
+	 * A number value used to hold the preferred terminal letter spacing value
+	 * retrieved from the settings store.
+	 * */
+	letterSpacing: number
+
+	/**
+	 * A number value used to hold the preferred text selection color
+	 * retrieved from the settings store.
+	 * */
+	selectionColor: string
+
+	/**
+	 * A number value used to hold the preferred terminal font style
+	 * retrieved from the settings store.
+	 * */
+	fontStyle
+
+	constructor(private readonly settingsService: SettingsService) {}
+
+	ngOnInit() {
+		// get the font color from the settings store.
+		this.fontColor &#x3D; this.settingsService.getItem(AppSettings.TERM_FG_COLOR) as string
+
+		// get the font size from the settings store.
+		this.fontSize &#x3D; +this.settingsService.getItem(AppSettings.FONT_SIZE)
+
+		// get the terminal selection color from the settings store.
+		this.selectionColor &#x3D; this.settingsService.getItem(AppSettings.TERM_SELECTION_COLOR) as string
+
+		// get the letter spacing value from the settings store.
+		this.letterSpacing &#x3D; +this.settingsService.getItem(AppSettings.TERM_LETTER_SPACING)
+
+		// get the line height (space between lines of text in the terminal) value from the settings store.
+		this.lineHeight &#x3D; +this.settingsService.getItem(AppSettings.TERM_LINE_HEIGHT)
+
+		// configure the form
+		this.foregroundSettingForm &#x3D; new FormGroup({
+			&quot;font-size&quot;: new FormControl(this.fontSize),
+			&quot;font-color&quot;: new FormControl(this.fontColor),
+			&quot;line-height&quot;: new FormControl(this.lineHeight),
+			&quot;letter-spacing&quot;: new FormControl(this.letterSpacing),
+			&quot;selection-color&quot;: new FormControl(this.selectionColor),
+			&quot;font-selector&quot;: new FormControl(&quot;&quot;)
+		})
+	}
+
+	/**
+	 * Set the terminal font size.
+	 * @param {number} size the size of the terminal font.
+	 * */
+	setFontSize(size: number | string) {
+		// if the current value is equal to the stored value, do not commit the changes.
+		if(this.fontSize &#x3D;&#x3D; size) {
+			return
+		}
+		// commit the new font size to the settings store.
+		this.settingsService.setItem(AppSettings.FONT_SIZE, +size)
+	}
+
+	/**
+	 * Set the terminal font color.
+	 * @param {string} color the new terminal font color.
+	 * */
+	setFontColor(color: string) {
+		// if the current value is equal to the stored value, do not commit the changes.
+		if(this.fontColor &#x3D;&#x3D;&#x3D; color) {
+			return
+		}
+		document.body.style.color &#x3D; color
+		// commit the new font color to the settings store.
+		this.settingsService.setItem(AppSettings.TERM_FG_COLOR, color)
+	}
+
+	/**
+	 * Set the terminal line height.
+	 * @param {number} lineHeight the amount of vertical space between lines of terminal text.
+	 * */
+	setLineHeight(lineHeight: number) {
+		// if the current value is equal to the stored value, do not commit the changes.
+		if(this.lineHeight &#x3D;&#x3D; lineHeight) {
+			return
+		}
+		// commit the new line height to the settings store.
+		this.settingsService.setItem(AppSettings.TERM_LINE_HEIGHT, lineHeight)
+	}
+
+	/**
+	 * Set the text selection color for the terminal.
+	 * @param {string} selectionColor the background color which will appear when terminal text is highlighted.
+	 * */
+	setSelectionColor(selectionColor: string) {
+		// if the current value is equal to the stored value, do not commit the changes.
+		if(this.selectionColor &#x3D;&#x3D; selectionColor) {
+			return
+		}
+		// commit the new text selection color to the settings store.
+		this.settingsService.setItem(AppSettings.TERM_SELECTION_COLOR, selectionColor)
+	}
+
+	/**
+	 * Set the amount of space between letters.
+	 * @param {number} spaceBetweenLetters the amount of horizontal space between letters of the terminal buffer.
+	 * */
+	setLetterSpacing(spaceBetweenLetters: number) {
+		// if the current value is equal to the stored value, do not commit the changes.
+		if(this.letterSpacing &#x3D;&#x3D; spaceBetweenLetters) {
+			return
+		}
+		// commit the new letter spacing value to the settings store.
+		this.settingsService.setItem(AppSettings.TERM_LETTER_SPACING, spaceBetweenLetters)
+	}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;form-group&quot; [formGroup]&#x3D;&quot;foregroundSettingForm&quot;&gt;
+
+	&lt;div class&#x3D;&quot;row row-cols-5 justify-content-center&quot;&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-fonts&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-arrows-expand&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setFontSize(foregroundSettingForm.get(&#x27;font-size&#x27;).value)&quot;
+				[value]&#x3D;&quot;fontSize&quot;
+				formControlName&#x3D;&quot;font-size&quot;
+				ngbTooltip&#x3D;&quot;Sets the terminal font size&quot;
+				type&#x3D;&quot;number&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white h-50&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-arrows-expand&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setLineHeight(foregroundSettingForm.get(&#x27;line-height&#x27;).value)&quot;
+				formControlName&#x3D;&quot;line-height&quot;
+				[value]&#x3D;&quot;lineHeight&quot;
+				type&#x3D;&quot;number&quot;
+				ngbTooltip&#x3D;&quot;Sets the amount of vertical space between the lines of text in the terminal&quot;
+				step&#x3D;&quot;0.05&quot;
+				max&#x3D;&quot;1.5&quot;
+				min&#x3D;&quot;0.4&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white h-50&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-arrow-left-right&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setLetterSpacing(foregroundSettingForm.get(&#x27;letter-spacing&#x27;).value)&quot;
+				formControlName&#x3D;&quot;letter-spacing&quot;
+				[value]&#x3D;&quot;letterSpacing&quot;
+				type&#x3D;&quot;number&quot;
+				ngbTooltip&#x3D;&quot;Sets the amount of space between letters in the terminal&quot;
+				step&#x3D;&quot;0.05&quot;
+				max&#x3D;&quot;1.5&quot;
+				min&#x3D;&quot;0.4&quot;
+				class&#x3D;&quot;form-control form-control-sm bg-dark border-secondary text-white h-50&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-textarea-t&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setSelectionColor(foregroundSettingForm.get(&#x27;selection-color&#x27;).value)&quot;
+				formControlName&#x3D;&quot;selection-color&quot;
+				[value]&#x3D;&quot;selectionColor&quot;
+				ngbTooltip&#x3D;&quot;Sets the background color of any selected terminal text&quot;
+				type&#x3D;&quot;color&quot;
+				class&#x3D;&quot;form-control form-control-color bg-transparent border-0&quot;
+			/&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;col d-flex&quot;&gt;
+			&lt;i class&#x3D;&quot;bi bi-fonts&quot;&gt;&lt;/i&gt;
+			&lt;i class&#x3D;&quot;bi bi-palette2&quot;&gt;&lt;/i&gt;
+			&lt;input
+				(change)&#x3D;&quot;setFontColor(foregroundSettingForm.get(&#x27;font-color&#x27;).value)&quot;
+				[value]&#x3D;&quot;fontColor&quot;
+				ngbTooltip&#x3D;&quot;Sets the font color of the terminal&quot;
+				formControlName&#x3D;&quot;font-color&quot;
+				type&#x3D;&quot;color&quot;
+				class&#x3D;&quot;form-control form-control-color bg-transparent border-0&quot;
+			/&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">
+		.bi {
+			font-size: 20px !important;
+			color: aliceblue;
+			font-weight: bold;
+			color-adjust: exact;
+			color-rendering: optimizeQuality;
+			margin-right: 5px;
+		}
+
+		.form-control {
+			min-width: 50px;
+		}
+
+	
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="form-group" [formGroup]="foregroundSettingForm">	<div class="row row-cols-5 justify-content-center">		<div class="col d-flex">			<i class="bi bi-fonts"></i>			<i class="bi bi-arrows-expand"></i>			<input				(change)="setFontSize(foregroundSettingForm.get(\'font-size\').value)"				[value]="fontSize"				formControlName="font-size"				ngbTooltip="Sets the terminal font size"				type="number"				class="form-control form-control-sm bg-dark border-secondary text-white h-50">		</div>		<div class="col d-flex">			<i class="bi bi-arrows-expand"></i>			<input				(change)="setLineHeight(foregroundSettingForm.get(\'line-height\').value)"				formControlName="line-height"				[value]="lineHeight"				type="number"				ngbTooltip="Sets the amount of vertical space between the lines of text in the terminal"				step="0.05"				max="1.5"				min="0.4"				class="form-control form-control-sm bg-dark border-secondary text-white h-50">		</div>		<div class="col d-flex">			<i class="bi bi-arrow-left-right"></i>			<input				(change)="setLetterSpacing(foregroundSettingForm.get(\'letter-spacing\').value)"				formControlName="letter-spacing"				[value]="letterSpacing"				type="number"				ngbTooltip="Sets the amount of space between letters in the terminal"				step="0.05"				max="1.5"				min="0.4"				class="form-control form-control-sm bg-dark border-secondary text-white h-50">		</div>		<div class="col d-flex">			<i class="bi bi-textarea-t"></i>			<input				(change)="setSelectionColor(foregroundSettingForm.get(\'selection-color\').value)"				formControlName="selection-color"				[value]="selectionColor"				ngbTooltip="Sets the background color of any selected terminal text"				type="color"				class="form-control form-control-color bg-transparent border-0"			/>		</div>		<div class="col d-flex">			<i class="bi bi-fonts"></i>			<i class="bi bi-palette2"></i>			<input				(change)="setFontColor(foregroundSettingForm.get(\'font-color\').value)"				[value]="fontColor"				ngbTooltip="Sets the font color of the terminal"				formControlName="font-color"				type="color"				class="form-control form-control-color bg-transparent border-0"			/>		</div>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AdvancedComponent', 'selector': 'ng-xterm-advanced-settings'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppTopbarComponent', 'selector': 'ng-xterm-app-topbar'},{'name': 'BackgroundComponent', 'selector': 'ng-xterm-background-settings'},{'name': 'CursorComponent', 'selector': 'ng-xterm-cursor-settings'},{'name': 'FontComponent', 'selector': 'ng-xterm-font-finder'},{'name': 'ForegroundComponent', 'selector': 'ng-xterm-foreground-settings'},{'name': 'SettingsComponent', 'selector': 'ng-xterm-settings'},{'name': 'ShellComponent', 'selector': 'ng-xterm-shell-settings'},{'name': 'SplitPanelComponent', 'selector': 'ng-xterm-split-panel'},{'name': 'TabsComponent', 'selector': 'ng-xterm-tabs'},{'name': 'TabSettingsComponent', 'selector': 'ng-xterm-tab-settings'},{'name': 'TaskListComponent', 'selector': 'ng-xterm-task-list'},{'name': 'TerminalComponent', 'selector': 'ng-xterm-terminal'},{'name': 'TopBarComponent', 'selector': 'ng-xterm-top-bar'},{'name': 'WindowControlsComponent', 'selector': 'ng-xterm-window-controls'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ForegroundComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ForegroundComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
