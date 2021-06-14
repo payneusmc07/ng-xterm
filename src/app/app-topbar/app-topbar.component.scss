@@ -1,0 +1,219 @@
+@import "src/styles/variables";
+
+@include makeNavBar;
+
+.navigation-clean {
+	width: 100%;
+	height: 45px;
+	z-index: 1;
+	position: fixed;
+
+	.active {
+		color: #ddd9df;
+	}
+
+	.remove-tab {
+		margin-left: -3px;
+	}
+
+	.term-icon {
+		margin-left: 5px;
+		@include noDrag;
+	}
+
+	.tab-id {
+		margin-left: 5px;
+		color: aliceblue;
+		font-size: 14px;
+		font-family: "Hack Nerd Font", sans-serif;
+	}
+
+	// The dedicated button to add a new tab.
+	.add-tab-mac {
+		@include noDrag;
+		width: 45px;
+		z-index: 1;
+		height: 35px;
+		color: white;
+		margin-right: -0.5rem;
+		border-top-color: transparent !important;
+		background-color: black;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		&:hover {
+			transition: 0.3s;
+			background-color: #393939;
+		}
+	}
+
+	// Standard Mac traffic lights.
+	.mac-standard {
+		.windows-style {
+			visibility: hidden !important;
+		}
+
+		.bi-terminal-fill {
+			color: #D3FF00;
+			font-size: 14px;
+		}
+
+		width: 120px;
+		height: 40px;
+		margin-left: -1.5rem;
+		margin-top: -15px;
+		border-left-color: transparent !important;
+		background-color: black !important;
+		border-radius: 5px;
+		color: rgb(255, 255, 255);
+		@include allowDrag;
+		-webkit-user-select: none;
+
+		#btn-minimize-mac {
+			@include noDrag;
+			margin-left: 2px;
+			color: #f5d200;
+			font-size: 13px;
+			line-height: 35px;
+
+			&:active {
+				color: #ba8c03;
+			}
+		}
+
+		#btn-maximize-mac {
+			@include noDrag;
+			margin-left: 2px;
+			color: #52d348;
+			font-size: 13px;
+			line-height: 35px;
+
+			&:active {
+				color: #0f9303;
+			}
+		}
+
+		#btn-close-mac {
+			@include noDrag;
+			margin-left: 10px;
+			color: #f04e3a;
+			font-size: 13px;
+			line-height: 35px;
+
+			&:active {
+				color: #ba0303;
+			}
+		}
+	}
+
+	// Blacked out  Mac traffic lights.
+	.mac-dark {
+		@extend .mac-standard;
+
+		.windows-style {
+			@extend .windows-style;
+			display: none;
+		}
+
+		.bi-terminal-fill {
+			color: grey !important;
+		}
+
+		#btn-close-mac {
+			color: grey !important;
+
+			&:active {
+				color: #ba0303 !important;
+			}
+
+			&:hover {
+				color: #f04e3a !important;
+			}
+
+		}
+
+		#btn-minimize-mac {
+			color: grey !important;
+
+			&:active {
+				color: #ba8c03 !important;
+			}
+
+			&:hover {
+				color: #f5d200 !important;
+			}
+		}
+
+		#btn-maximize-mac {
+			color: grey !important;
+
+			&:active {
+				color: #0f9303 !important;
+			}
+
+			&:hover {
+				color: #52d348 !important;
+			}
+		}
+	}
+
+	// Windows style controls.
+	.windows-style {
+		@extend .add-tab-mac;
+		.bi-terminal-fill {
+			color: #D3FF00;
+			font-size: 14px;
+		}
+
+		.bi-dash-lg,
+		.bi-square,
+		.bi-x-lg {
+			margin: 0 5px 0 7px;
+		}
+
+		width: 140px !important;
+
+		#btn-close-win {
+			@extend #btn-close-mac;
+			color: white !important;
+
+			&:active {
+				color: #959595 !important;
+			}
+		}
+
+		#btn-maximize-win {
+			@extend #btn-maximize-mac;
+			color: white !important;
+
+			&:active {
+				color: #959595 !important;
+			}
+		}
+
+		#btn-minimize-win {
+			@extend #btn-minimize-mac;
+			color: white !important;
+
+			&:active {
+				color: #959595 !important;
+			}
+		}
+
+		.mac-standard {
+			visibility: hidden !important;
+		}
+	}
+
+	.hidden {
+		display: none;
+	}
+
+}
+
+

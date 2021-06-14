@@ -1,0 +1,57 @@
+<div class="form-group" [formGroup]="cursorSettingsForm">
+	<div class="row row-cols-4 justify-content-evenly">
+
+		<div class="col d-flex">
+			<i class="bi bi-cursor-text"></i>
+			<i class="bi bi-palette-fill"></i>
+			<input (change)="setCursorColor(cursorSettingsForm.get('main-color').value)"
+			       [value]="cursorColor"
+			       formControlName="main-color"
+			       type="color"
+			       ngbTooltip="Sets the main color of the terminal cursor"
+			       class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+
+		<div class="col d-flex">
+			<i class="bi bi-cursor-text"></i>
+			<i class="bi bi-palette2"></i>
+			<input (change)="setCursorAccentColor(cursorSettingsForm.get('accent-color').value)"
+			       [value]="cursorAccentColor"
+			       ngbTooltip="Sets the accent (non focused) color of the terminal cursor"
+			       formControlName="accent-color"
+			       type="color"
+			       class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+
+		<div class="col d-flex">
+			<i class="bi bi-cursor-fill"></i>
+			<select class="form-control bg-dark border-secondary form-control-sm text-white h-50"
+			       (change)="setCursorStyle(cursorSettingsForm.get('style').value)"
+			        formControlName="style"
+			        ngbTooltip="Sets the style of cursor used by the terminal"
+			        [value]="cursorStyles"
+			>
+				<option *ngFor="let style of cursorStyles"
+				        [ngValue]="style"
+				>{{ style }}</option>
+			</select>
+		</div>
+
+		<div class="col d-flex">
+			<div class="form-check">
+				<input class="form-check-input"
+				       formControlName="should-blink"
+				       type="checkbox"
+				       ngbTooltip="Should the terminal cursor blink?"
+				       [value]="cursorBlink"
+				       (change)="setCursorBlink(cursorSettingsForm.get('should-blink').value)"
+				>
+				<label class="form-label text-white">Cursor Blink</label>
+			</div>
+		</div>
+
+	</div>
+</div>
+

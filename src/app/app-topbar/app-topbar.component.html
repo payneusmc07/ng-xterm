@@ -1,0 +1,40 @@
+<nav class="navbar navigation-clean">
+	<div class="container-fluid">
+		<a [class.hidden]="windowsStyleControls"
+		   [class.mac-dark]="darkMacControls"
+
+		   class="navbar-brand bg-dark border rounded mac-standard border-secondary text-nowrap">
+
+			<i class="bi bi-circle-fill" id="btn-close-mac" (click)="closeWindow()"></i>
+
+			<i class="bi bi-circle-fill" id="btn-minimize-mac" (click)="minimizeWindow()"></i>
+
+			<i class="bi bi-circle-fill" id="btn-maximize-mac" (click)="maximizeWindow()"></i>
+
+			<i class="bi bi-terminal-fill term-icon"></i>
+
+			<a class="text-white tab-id">{{ tabID ?? 0 }}</a>
+		</a>
+
+		<a *ngIf="windowsStyleControls"
+		   class="navbar-brand bg-dark border rounded windows-style border-secondary text-nowrap">
+			<i class="bi bi-terminal-fill term-icon">
+				{{ tabID }}
+			</i>
+
+			<i class="bi bi-dash-lg" id="btn-minimize-win" (click)="minimizeWindow()"></i>
+
+			<i class="bi bi-square" id="btn-maximize-win" (click)="maximizeWindow()"></i>
+
+			<i class="bi bi-x-lg" id="btn-close-win" (click)="closeWindow()"></i>
+		</a>
+	</div>
+	<a
+		[class.hidden]="windowsStyleControls"
+		(click)="addTab()"
+		id="add-tab"
+		class="navbar-brand border rounded border-secondary add-tab-mac text-center">
+		<i class="bi bi-plus-lg text-white"></i>
+	</a>
+</nav>
+

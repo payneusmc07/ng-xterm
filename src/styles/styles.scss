@@ -1,0 +1,86 @@
+/**
+	This file is mostly used for importing bootstrap and styles
+	which need to be applied globally.
+
+	See _variables.scss for variable and mixin configurations
+*/
+
+@use "~bootstrap/scss/bootstrap";
+@import "_variables";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "terminal-searchbar";
+
+@include noTextDecoration;
+@include makeButton;
+@include makeSelect;
+
+@font-face {
+	font-family: "Hack Nerd Font";
+	src: url("./fonts/Hack-Regular.ttf") format("ttf");
+	src: url("./fonts/Hack-Italic.ttf") format("ttf");
+	src: url("./fonts/Hack-Bold.ttf") format("ttf");
+	src: url("./fonts/Hack-BoldItalic.ttf") format("ttf");
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	//-webkit-font-smoothing: subpixel-antialiased;
+	overscroll-behavior: contain;
+	color-rendering: optimizeQuality;
+	color-interpolation: sRGB;;
+	font-feature-settings: "dlig", "liga", "calt";
+	font-feature-settings:"kern" 1;
+}
+
+
+body, html {
+	height: 100%;
+}
+
+.drag {
+	@include allowDrag;
+}
+
+.noDrag {
+	@include noDrag;
+}
+
+input, button {
+	@include noDrag;
+}
+
+.form-control:focus {
+	@include noFocusRing;
+}
+
+textarea {
+	resize: none;
+}
+
+* {
+	text-decoration: none !important;
+}
+
+
+// disable the xterm scroll bar
+::-webkit-scrollbar {
+	display: none;
+}
+
+.form-check-input {
+	border-color: transparent;
+	&:focus, &:checked {
+		@include noFocusRing;
+	}
+}
+
+
+.form-label {
+	color: white !important;
+}
+
+select {
+	@include makeSelect;
+}
+
+

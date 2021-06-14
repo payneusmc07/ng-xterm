@@ -1,0 +1,65 @@
+<div class="form-group" [formGroup]="foregroundSettingForm">
+
+	<div class="row row-cols-5 justify-content-center">
+		<div class="col d-flex">
+			<i class="bi bi-fonts"></i>
+			<i class="bi bi-arrows-expand"></i>
+			<input
+				(change)="setFontSize(foregroundSettingForm.get('font-size').value)"
+				[value]="fontSize"
+				formControlName="font-size"
+				ngbTooltip="Sets the terminal font size"
+				type="number"
+				class="form-control form-control-sm bg-dark border-secondary text-white h-50">
+		</div>
+		<div class="col d-flex">
+			<i class="bi bi-arrows-expand"></i>
+			<input
+				(change)="setLineHeight(foregroundSettingForm.get('line-height').value)"
+				formControlName="line-height"
+				[value]="lineHeight"
+				type="number"
+				ngbTooltip="Sets the amount of vertical space between the lines of text in the terminal"
+				step="0.05"
+				max="1.5"
+				min="0.4"
+				class="form-control form-control-sm bg-dark border-secondary text-white h-50">
+		</div>
+		<div class="col d-flex">
+			<i class="bi bi-arrow-left-right"></i>
+			<input
+				(change)="setLetterSpacing(foregroundSettingForm.get('letter-spacing').value)"
+				formControlName="letter-spacing"
+				[value]="letterSpacing"
+				type="number"
+				ngbTooltip="Sets the amount of space between letters in the terminal"
+				step="0.05"
+				max="1.5"
+				min="0.4"
+				class="form-control form-control-sm bg-dark border-secondary text-white h-50">
+		</div>
+		<div class="col d-flex">
+			<i class="bi bi-textarea-t"></i>
+			<input
+				(change)="setSelectionColor(foregroundSettingForm.get('selection-color').value)"
+				formControlName="selection-color"
+				[value]="selectionColor"
+				ngbTooltip="Sets the background color of any selected terminal text"
+				type="color"
+				class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+		<div class="col d-flex">
+			<i class="bi bi-fonts"></i>
+			<i class="bi bi-palette2"></i>
+			<input
+				(change)="setFontColor(foregroundSettingForm.get('font-color').value)"
+				[value]="fontColor"
+				ngbTooltip="Sets the font color of the terminal"
+				formControlName="font-color"
+				type="color"
+				class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+	</div>
+</div>

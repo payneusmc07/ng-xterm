@@ -1,0 +1,48 @@
+<div class="d-flex">
+	<ul ngbNav #nav="ngbNav"
+	    [(activeId)]="active"
+	    class="nav-pills drag border-0"
+	    orientation="vertical"
+	    [destroyOnHide]="false"
+	    keyboard="changeWithArrows"
+	    role="presentation"
+	    animation="false"
+	>
+		<li [ngbNavItem]="i"
+		    *ngFor="let tab of (tabContent$ | async); let i = index"
+		    class="noDrag"
+		>
+			<a ngbNavLink
+			   [id]="i"
+			   [ngStyle]="{'background-color': tabBackgroundColor, 'color': tabFontColor}"
+			   class="noDrag mt-1 mb-3 custom-tab"
+			   (click)="emitTabID(i)"
+			   (dblclick)="removeTab(i)"
+			>
+				{{ i }}
+			</a>
+			<ng-template ngbNavContent>
+				<ng-xterm-split-panel [tabID]="i" [id]="tabToRemove" ></ng-xterm-split-panel>
+			</ng-template>
+		</li>
+
+		<li ngbNavItem>
+			<a ngbNavLink
+			   (click)="emitTabID('-')"
+			   class="noDrag bg-transparent border-0">
+				<i class="bi bi-gear-fill text-white"></i>
+			</a>
+			<ng-template ngbNavContent>
+				<ng-xterm-settings></ng-xterm-settings>
+			</ng-template>
+		</li>
+
+	</ul>
+	<div [ngbNavOutlet]="nav" class="container-fluid"></div>
+</div>
+
+
+
+
+
+

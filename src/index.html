@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<base href="/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<app-root>
+	<div class="loading">
+		<div class="bullet"></div>
+		<div class="bullet"></div>
+		<div class="bullet"></div>
+		<div class="bullet"></div>
+	</div>
+	<style>
+		body {
+			background-color: black;
+		}
+		.loading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		.loading .bullet {
+			position: absolute;
+			padding: 5px;
+			border-radius: 50%;
+			background: #65a3ff;
+			-webkit-animation: animIn 1s ease-in-out 0s infinite;
+			animation: animIn 1s ease-in-out 0s infinite;
+		}
+		.loading .bullet:nth-child(1) {
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+		.loading .bullet:nth-child(2) {
+			-webkit-animation-delay: 0.10s;
+			animation-delay: 0.10s;
+		}
+		.loading .bullet:nth-child(3) {
+			-webkit-animation-delay: 0.3s;
+			animation-delay: 0.3s;
+		}
+		.loading .bullet:nth-child(4) {
+			-webkit-animation-delay: 0.45s;
+			animation-delay: 0.45s;
+		}
+		@-webkit-keyframes animIn {
+			0% {
+				-webkit-transform: translateX(-100px);
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				-webkit-transform: translateX(100px);
+				transform: translateX(100px);
+				opacity: 0;
+			}
+		}
+		@keyframes animIn {
+			0% {
+				-webkit-transform: translateX(-100px);
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				-webkit-transform: translateX(100px);
+				transform: translateX(100px);
+				opacity: 0;
+			}
+		}
+	</style>
+
+</app-root>
+</body>
+</html>

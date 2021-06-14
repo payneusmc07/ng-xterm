@@ -1,0 +1,105 @@
+{
+	"copyright": "Copyright © 2021 NG-Xterm",
+	"generateUpdatesFilesForAllChannels": true,
+	"directories": {
+		"output": "release/"
+	},
+	"dmg": {
+		"contents": [
+			{
+				"x": 130,
+				"y": 220
+			},
+			{
+				"path": "/Applications",
+				"type": "link",
+				"x": 410,
+				"y": 220
+			}
+		]
+	},
+	"electronVersion": "13.1.0",
+	"files": [
+		"**/*",
+		"!**/*.ts",
+		"!*.code-workspace",
+		"!LICENSE.md",
+		"!package.json",
+		"!package-lock.json",
+		"!src/",
+		"!e2e/",
+		"!hooks/",
+		"!angular.json",
+		"!_config.yml",
+		"!karma.conf.js",
+		"!tsconfig.json",
+		"!tslint.json"
+	],
+	"linux": {
+		"icon": "./build/linux/icon.png",
+		"target": [
+			"AppImage"
+		]
+	},
+	"mac": {
+		"provisioningProfile": "./build/mac/ngxterm.provisionprofile",
+		"type": "distribution",
+		"appId": "com.pusmc07.${name}",
+		"artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+		"category": "public.app-category.developer-tools",
+		"darkModeSupport": true,
+		"helperBundleId": "${appBundleIdentifier}.helper",
+		"icon": "build/mac/AppIcon.icns",
+		"target": [
+			"dmg"
+		],
+		"extendInfo": {
+			"CFBundleDocumentTypes": [
+				{
+					"CFBundleTypeName": "Folders",
+					"CFBundleTypeRole": "Viewer",
+					"LSHandlerRank": "Alternate",
+					"LSItemContentTypes": [
+						"public.folder",
+						"com.apple.bundle",
+						"com.apple.package",
+						"com.apple.resolvable"
+					]
+				},
+				{
+					"CFBundleTypeName": "UnixExecutables",
+					"CFBundleTypeRole": "Shell",
+					"LSHandlerRank": "Alternate",
+					"LSItemContentTypes": [
+						"public.unix-executable"
+					]
+				}
+			],
+			"NSAppleEventsUsageDescription": "An application in NG-Xterm wants to use AppleScript.",
+			"NSCalendarsUsageDescription": "An application in NG-Xterm wants to access Calendar data.",
+			"NSCameraUsageDescription": "An application in NG-Xterm wants to use the Camera.",
+			"NSContactsUsageDescription": "An application in NG-Xterm wants to access your Contacts.",
+			"NSDesktopFolderUsageDescription": "An application in NG-Xterm wants to access the Desktop folder.",
+			"NSDocumentsFolderUsageDescription": "An application in NG-Xterm wants to access the Documents folder.",
+			"NSDownloadsFolderUsageDescription": "An application in NG-Xterm wants to access the Downloads folder.",
+			"NSFileProviderDomainUsageDescription": "An application in NG-Xterm wants to access files managed by a file provider.",
+			"NSFileProviderPresenceUsageDescription": "An application in NG-Xterm wants to be informed when other apps access files that it manages.",
+			"NSLocationUsageDescription": "An application in NG-Xterm wants to access your location information.",
+			"NSMicrophoneUsageDescription": "An application in NG-Xterm wants to use your microphone.",
+			"NSMotionUsageDescription": "An application in NG-Xterm wants to use the device’s accelerometer.",
+			"NSNetworkVolumesUsageDescription": "An application in NG-Xterm wants to access files on a network volume.",
+			"NSPhotoLibraryUsageDescription": "An application in NG-Xterm wants to access the photo library.",
+			"NSRemindersUsageDescription": "An application in NG-Xterm wants to access your reminders.",
+			"NSRemovableVolumesUsageDescription": "An application in NG-Xterm wants to access files on a removable volume.",
+			"NSSpeechRecognitionUsageDescription": "An application in NG-Xterm wants to send user data to Apple’s speech recognition servers.",
+			"NSSystemAdministrationUsageDescription": "The operation being performed by an application in NG-Xterm requires elevated permission."
+		}
+	},
+	"productName": "NG-Xterm",
+	"win": {
+		"icon": "build/win/icon.ico",
+		"target": [
+			"portable"
+		]
+	}
+}

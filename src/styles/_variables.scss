@@ -1,0 +1,132 @@
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$btnBG:    #156a85 !default;
+$black:    #000 !default;
+$btnHover: #69a2e5 !default;
+$text: #c8e8ea !default;
+$bodyBG:   #343a40 !default;
+$iconColor: #fffcfc !default;
+
+@mixin noFocusRing {
+	border-color: transparent;
+	box-shadow: none;
+	outline: 0;
+}
+
+@mixin noTextDecoration {
+	* {
+		text-decoration: none;
+	}
+}
+
+@mixin allowDrag {
+	-webkit-app-region: drag !important;
+	-webkit-user-select: none;
+}
+
+@mixin noDrag {
+	-webkit-app-region: no-drag !important;
+}
+
+@mixin adjustIcons {
+	font-size: 20px !important;
+	color: aliceblue;
+	font-weight: bold;
+	color-adjust: exact;
+	color-rendering: optimizeQuality;
+	margin-right: 5px;
+}
+
+
+@mixin makeButton {
+	.btn {
+		width: 100px;
+		background-color: $btnBG;
+		border-color: $btnBG;
+		color: $text;
+		&:hover {
+			background-color: $btnHover;
+			border-color: $btnHover;
+			color: $gray-100;
+		}
+		&:active {
+			background-color: $btnBG;
+			border-color: $btnBG;
+		}
+		&:focus {
+			@include noFocusRing
+		}
+	}
+}
+
+@mixin makeSelect {
+	select {
+		color: #e8f1ff;
+		background: #000000 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
+		&:focus, &:active {
+			@include noFocusRing;
+		}
+	}
+}
+
+@mixin dangerOnHover {
+	.danger {
+		&:hover {
+			color: white;
+			border-color: red;
+			background-color: red;
+		}
+		&:active {
+			background-color: $btnBG;
+			border-color: $btnBG;
+		}
+	}
+
+}
+
+@mixin customNavTabs {
+	.nav-link {
+		background: $btnBG !important;
+		@include noDrag;
+		&:hover {
+			background-color: $btnHover !important;
+		}
+		&:active {
+			background-color: $btnBG !important;
+			border-color: $btnBG !important;
+		}
+	}
+
+	.nav-link:hover > .close {
+		opacity: 0.8;
+	}
+
+	.nav-pills {
+		margin-top: 2.3rem;
+		color: white;
+	}
+	.show>.nav-link {
+		background-color: #32c1c3 !important;
+	}
+
+}
+
+@mixin makeNavBar {
+	.navbar {
+		text-align: center;
+		@include allowDrag;
+		@include noTextDecoration;
+
+		.nav-item {
+			// t, r, b, l
+			margin: 0 10px 0 10px;
+		}
+	}
+}

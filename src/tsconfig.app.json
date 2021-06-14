@@ -1,0 +1,42 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../out-tsc/app",
+		"module": "es2020",
+		"incremental": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"pretty": true,
+		"preserveConstEnums": true,
+		"inlineSourceMap": true,
+		"esModuleInterop": true,
+		"baseUrl": "",
+		"lib": [
+			"es2017",
+			"es2016",
+			"es2015",
+			"dom"
+		],
+		"paths": {
+			"@tabs/*": ["tabs/*"],
+			"@task-list/*": ["task-list/*"],
+			"@shared/*": ["shared/*"],
+			"@services/*": ["shared/services/*"],
+			"@utils/*": ["shared/utils/*"],
+			"@terminal/*": ["terminal/*"],
+			"@settings/*": ["settings/*"]
+		},
+		"types": []
+	},
+	"include": [
+		"main.ts",
+		"polyfill.ts",
+		"**/*.d.ts"
+	],
+	"angularCompilerOptions": {
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true,
+		"preserveWhitespaces": true
+	}
+}

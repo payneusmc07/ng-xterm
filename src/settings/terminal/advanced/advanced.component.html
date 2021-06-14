@@ -1,0 +1,108 @@
+<div class="form-group" [formGroup]="advancedTerminalControlsForm">
+
+	<div class="row row-cols-3 mb-3 justify-content-evenly">
+		<!-- terminal renderer -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<i class="bi bi-box"></i>
+			<select class="form-control text-white border-secondary form-control-sm text-white"
+			        (change)="setTerminalRenderer(advancedTerminalControlsForm.get('renderer-type').value)"
+			        [value]="rendererTypes"
+			        ngbTooltip="Which renderer the terminal will use. Canvas is faster, but not always available. In this case, the DOM is the automatic fallback"
+			        formControlName="renderer-type"
+			>
+				<option [ngValue]="r"
+				        *ngFor="let r of rendererTypes">
+					{{ r }}
+				</option>
+			</select>
+		</div>
+
+		<!-- terminal type -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<select class="form-control form-control-sm border-secondary text-white terminal-type"
+			        [value]="terminalTypes"
+			        (change)="setTerminalType(advancedTerminalControlsForm.get('terminal-type').value)"
+			        formControlName="terminal-type"
+			        ngbTooltip="Sets the type of terminal session used the underlying xterm"
+			>
+				<option [ngValue]="terminal"
+				        *ngFor="let terminal of terminalTypes">
+					{{ terminal }}
+				</option>
+			</select>
+		</div>
+
+		<!-- customTitle -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<i class="bi bi-text-paragraph"></i>
+			<input
+				(change)="setCustomTitle(advancedTerminalControlsForm.get('custom-title').value)"
+				formControlName="custom-title"
+				[value]="customWindowTitle"
+				placeholder="custom title"
+				type="text"
+				ngbTooltip="Sets the custom terminal title This custom title will override the default process title displayed by the shell session"
+				class="form-control form-control-sm bg-dark border-secondary text-white">
+		</div>
+	</div>
+
+	<div class="row row-cols-3 justify-content-evenly">
+		<!-- scrollback  -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<i class="bi bi-arrow-counterclockwise"></i>
+			<input
+				(change)="setLinesOfScrollback(advancedTerminalControlsForm.get('lines-of-scrollback').value)"
+				formControlName="lines-of-scrollback"
+				ngbTooltip="Sets the number of lines the terminal will allow for scrollback"
+				[value]="linesOfScrollback"
+				type="number"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white w-50">
+		</div>
+		<!-- pty cols -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<i class="bi bi-layout-three-columns"></i>
+			<input
+				(change)="setPTYCols(advancedTerminalControlsForm.get('pty-cols').value)"
+				formControlName="pty-cols"
+				[value]="ptyColumns"
+				type="number"
+				ngbTooltip="Sets the number of columns used by the pty/tty"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white h-50">
+		</div>
+		<!-- pty rows -->
+		<div class="col d-flex">
+			<i class="bi bi-terminal-fill"></i>
+			<i class="bi bi-grid-3x2"></i>
+			<input
+				(change)="setPTYRows(advancedTerminalControlsForm.get('pty-rows').value)"
+				formControlName="pty-rows"
+				[value]="ptyRows"
+				ngbTooltip="Sets the number of rows used by the pty/tty"
+				type="number"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white h-50">
+		</div>
+	</div>
+
+	<div class="row mt-3">
+		<!-- anti alias -->
+		<div class="form-check">
+			<input class="form-check-input"
+			       id="anti-alias"
+			       formControlName="anti-alias"
+			       type="checkbox"
+			       ngbTooltip=""
+			       [value]="showTooltips"
+			       (change)="setAntiAlias(advancedTerminalControlsForm.get('anti-alias').value)"
+			>
+			<label class="form-label text-white">Anti-aliased Font</label>
+		</div>
+	</div>
+</div>
