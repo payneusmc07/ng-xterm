@@ -1,0 +1,291 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/Vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ng-xterm-readme">NG-Xterm README</h1>
+<p><a href="https://angular.io/"><img src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg" alt="Angular Logo" class="img-responsive"></a> <a href="https://electronjs.org/"><img src="https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg" alt="Electron Logo" class="img-responsive"></a></p>
+<p><img src="https://img.shields.io/badge/maintained-yes-brightgreen" alt="" class="img-responsive"> <a href="https://github.com/payneusmc07/ng-xterm/tree/de6a157501aa2f9b08fd9733d24ed9d0df751e54/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="" class="img-responsive"></a></p>
+<p><a href="https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Linux+Build%22"><img src="https://github.com/maximegris/angular-electron/workflows/Linux%20Build/badge.svg" alt="" class="img-responsive"></a> <a href="https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22MacOS+Build%22"><img src="https://github.com/maximegris/angular-electron/workflows/MacOS%20Build/badge.svg" alt="" class="img-responsive"></a> <a href="https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Windows+Build%22"><img src="https://github.com/maximegris/angular-electron/workflows/Windows%20Build/badge.svg" alt="" class="img-responsive"></a></p>
+<h3 id="introduction">Introduction</h3>
+<p>As a Linux and Mac OS user (mostly Mac), I spend a lot of time at the terminal. While there are several amazing terminal emulators available such as <strong>Hyper</strong> and <strong>iTerm2</strong>, I wanted to build my own.</p>
+<h3 id="currently-versions">Currently Versions:</h3>
+<ul>
+<li>Angular v12.0.3</li>
+<li>Electron v13.1.1</li>
+<li>Electron Builder v22.10.5</li>
+</ul>
+<h3 id="gotchas">Gotchas</h3>
+<ul>
+<li>Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only
+restarted.</li>
+</ul>
+<ul>
+<li>Angular 11.x CLI needs Node 10.13 or later to work correctly.
+If you want to generate Angular components with Angular-cli , you <strong>MUST</strong> install <code>@angular/cli</code> installed
+on your system. Please see <a href="https://github.com/angular/angular-cli">Angular-cli documentation</a> for further assistance.`</li>
+</ul>
+<h3 id="getting-started">Getting Started</h3>
+<h4 id="clone-this-repository-locally">Clone this repository locally:</h4>
+<div><pre class="line-numbers"><code class="language-shell">git clone https://github.com/payneusmc07/ng-xterm.git</code></pre></div><h4 id="install-dependencies-with-yarn-or-npm">Install dependencies with yarn or npm:</h4>
+<div><pre class="line-numbers"><code class="language-shell">yarn install</code></pre></div><h3 id="words-of-warning">Words of warning</h3>
+<p>Node-pty (what is used by ng-xterm to spawn terminal sessions) is what is known as a Native Module.
+This means it is written in C/C++ and complied for use with Node/Electron. Native Modules can be very finicky, 
+and Node-pty is notorious for causing development headaches.</p>
+<p>If you try to build/run ng-xterm and you see errors in the developer tools which say something
+along the lines of:</p>
+<div><pre class="line-numbers"><code class="language-shell">Cannot find file &quot;../Debug/node-pty.node&quot;</code></pre></div><p>then node-pty needs to be rebuild for the current version of Node/Electron you are using.
+There are two scripts in package.json to help accomplish this.</p>
+<ul>
+<li><strong>postinstall</strong>: Utilizes Electron Builder to rebuild any Native Modules, this is automatically run
+after installing/removing dependencies.</li>
+</ul>
+<ul>
+<li><strong>rebuild:pty</strong>: Uses Electron Rebuild.</li>
+</ul>
+<ul>
+<li>there is also a third (but not as effective method) to rebuild Node-pty, using NPM to rebuild the associated binary
+files. To use NPM, just run:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-shell">npm rebuild node-pty --update-binaries</code></pre></div><ul>
+<li>To make life easier for future users/developers, I included the rebuild:pty in the post install script 
+so Electron Rebuild is automatically run after each dependency update. I did this because
+during the course of developing ng-xterm, I  found when using &quot;brand new&quot; versions of Electron,
+(such as 13.0+) that Electron Builder did not always get the job done for rebuilding Node-pty. </li>
+</ul>
+<h1 id="important-commands">Important Commands</h1>
+<h4 id="for-intellijwebstorm-users">For IntelliJ/Webstorm users</h4>
+<p>The included .run folder contains pre-configured scripts which you <em>should</em> be able
+to load and run without any configuration. These scripts contain the needed environment variables
+to develop NG-Xterm.</p>
+<h4 id="for-non-intellijwebstorm-users">For Non IntelliJ/Webstorm users</h4>
+<p>The included .run folder also contains VSCode tasks for running in development
+and building NG-Xterm for production.</p>
+<h4 id="if-you-are-not-using-the-included-script-files">If you are not using the included script files</h4>
+<p>You will need to set your environment variables manually.</p>
+<h4 id="install-and-rebuild-dependencies">Install and rebuild dependencies</h4>
+<div><pre class="line-numbers"><code class="language-shell">yarn init</code></pre></div><h4 id="run-the-main-and-renderer-process-in-development-mode">Run the main and renderer process in development mode</h4>
+<p><strong>Please make sure to set the following environment variables if you are not using the included scripts.</strong></p>
+<ul>
+<li>DEV_URL=<a href="http://localhost:4200">http://localhost:4200</a></li>
+<li>NODE_ENV=development</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-shell">yarn dev</code></pre></div><h4 id="build-the-renderer-angular-process-your-built-files-are-in-the-dist-folder">Build the renderer (Angular) process. Your built files are in the /dist folder.</h4>
+<div><pre class="line-numbers"><code class="language-bash">yarn build:prod</code></pre></div><h4 id="build-the-main-process-only">Build the main process only.</h4>
+<p><strong>Note: Please make sure you have run build:prod 
+as Electron will look for the static index.html file.</strong></p>
+<div><pre class="line-numbers"><code class="language-shell">yarn build:electron-only</code></pre></div><h4 id="build-only-the-main-process-in-production-mode">Build only the main process in production mode</h4>
+<p><strong>please make sure to set the following environment variable if you are not using the included scripts.</strong></p>
+<ul>
+<li>NODE_ENV=production<div><pre class="line-numbers"><code class="language-shell">yarn build:electron-only:all</code></pre></div></li>
+</ul>
+<h4 id="build-ng-xterm-for-all-platforms-but-nothing-is-published-to-git">Build NG-Xterm for all platforms, but nothing is published to Git.</h4>
+<p><strong>please make sure to set the following environment variable if you are not using the included scripts.</strong></p>
+<ul>
+<li>NODE_ENV=production<div><pre class="line-numbers"><code class="language-shell">yarn build:final:all-platforms:no-publish</code></pre></div></li>
+</ul>
+<h4 id="build-ng-xterm-for-all-platforms-and-the-completed-app-is-published-to-git">Build NG-Xterm for all platforms, and the completed app is published to Git.</h4>
+<div><pre class="line-numbers"><code class="language-shell">yarn build:final:all-platforms:publis</code></pre></div><h4 id="generate-documentation">Generate documentation</h4>
+<div><pre class="line-numbers"><code class="language-bash">yarn compodoc</code></pre></div><h3 id="documentation">Documentation</h3>
+<p>It has always been a pet peeve of mine when a program or code base is not properly documented (<strong>you know who you are</strong>).</p>
+<p>With this in mind, I know some of you may feel the amount of documentation/comments I included is a bit excessive, but I would rather have &quot;too much&quot; and sleep better knowing everything is properly documented.</p>
+<ul>
+<li>The majority of the documentation was generated with the <code>compodoc</code> package.</li>
+<li>The code is also heavily commented.</li>
+</ul>
+<h1 id="common-questions">Common Questions</h1>
+<ul>
+<li>Why are certain class members not marked as private when they
+can or should be?</li>
+</ul>
+<p>Due to the nature of the new Angular compiler and rendering system (Ivy),
+variables that will be used in the html template cannot be marked as private,
+since they cannot be resolved by the compiler. An example of this can be seen
+in the code snippet from the app-root component. Since the class member
+<strong>idFromTab: number | string</strong> is used in the html template, it must remain public.</p>
+<div><pre class="line-numbers"><code class="language-ts">
+/** The id of the currently selected tab in the tabs component. */
+idFromTab: number | string
+
+/**
+ * Angular will throw the following error if idFromTab 
+ * is made private.
+ *
+ * Private field idFromTab cannot be resolved from the
+ * component template when using the AOT compiler
+ * */
+private idFromTab: number | string
+
+</code></pre></div><div><pre class="line-numbers"><code class="language-html">&lt;!-- Since tabID is actively used in the template, it MUST be public --&gt;
+&lt;ng-xterm-app-topbar [tabID]=&quot;idFromTab&quot;&gt;&lt;/ng-xterm-app-topbar&gt;
+&lt;ng-xterm-tabs (tabID)=&quot;setID($event)&quot;&gt;&lt;/ng-xterm-tabs&gt;</code></pre></div><p><strong>Why are public classes/functions not explicitly marked as public?</strong></p>
+<p>By default, methods and classes are public in Typescript, so I did not feel
+the need to repeat the obvious. Aside from that, when you are working with classes
+which have a lot of memeber methods, it can become easy to mistake public for private if you are not paying attention.</p>
+<p><strong>Why is eslint not installed?</strong></p>
+<p>Seeing as NG-Xterm was developed soley by me, I did not feel adding something which monitors my
+already consistent coding style was needed.</p>
+<h1 id="forms">Forms</h1>
+<h2 id="how-the-various-settings-forms-work">How the various settings forms work.</h2>
+<p>The code snippet below was taken from the ng-xterm-tab-settings component.
+Since Reactive forms in Angular can be a bit confusing, I thought I would provide
+a bit of a break down as to how the various forms were configured, and how each setting
+is retrieved from the terminal settings store.</p>
+<p>Please note, not all comments or functions will be a complete refection of the actual code.
+This page is meant as more of a walkthrough/demo.</p>
+<div><pre class="line-numbers"><code class="language-ts">import { Component, OnInit } from &quot;&#64;angular/core&quot;
+import { FormControl, FormGroup } from &quot;&#64;angular/forms&quot;
+import { SettingsService } from &quot;&#64;shared/services&quot;
+import { AppSettings } from &quot;&#64;shared/utils&quot;
+
+&#64;Component({
+    selector: &quot;ng-xterm-tab-settings&quot;,
+    templateUrl: &quot;./tab-settings.component.html&quot;,
+    styleUrls: [&quot;./tab-settings.component.scss&quot;]
+})
+
+/** The form which modifies any settings related to the ng-xterm-tab-settings component */
+export class TabSettingsComponent implements OnInit {
+
+    /** Define the basic form which modifies any settings related to the ng-xterm-tab-settings component */
+    tabSettingsForm: FormGroup
+
+    /**
+     * A string value which will represent the preferred background color
+     * for the UI tabs. This value will be retrieved from the settings store.
+     * */
+    tabBackgroundColor: string
+
+    /** By &quot;declaring&quot; the various services used by this component in the constructor, 
+     * we allow for the Angular dependency injection (DI) mechanisms to properly configure
+     * and instantiate the service class(es) for us. When using DI, we DO NOT instantiate 
+     * the service class(es) with the &quot;new&quot; keyword. 
+     * */
+    constructor(private readonly settingsService: SettingsService) {}
+
+    /**
+     * Since Electron Store returns an &quot;unknown&quot; value, each retrieved settings
+     * must be type cast to a specific value. Otherwise, Typescript will throw error code
+     * TS2322: Type &#39;unknown&#39; is not assignable to type &#39;[stored value]&#39;.
+     * */
+    ngOnInit() {
+        // DO NOT DO THIS!
+        this.settingsService = new SettingsService()
+
+        // retrieve the background color from the settings store. and type cast it to a string
+        this.tabBackgroundColor = this.settingsService.getItem( AppSettings.TAB_BG_COLOR) as string
+
+        this.tabSettingsForm = new FormGroup({
+            // the name of the form control: instantiate a new FormControl with an optional default value
+            &quot;tab-background&quot;: new FormControl(this.tabBackgroundColor),
+        })
+    }
+}</code></pre></div><h3 id="a-big-thank-you-to">A Big Thank You To</h3>
+<ul>
+<li><p>Vercel for giving us Hyper, which served as a large inspiration for this project.</p>
+</li>
+<li><p>maximegris of Github for the awesome boilerplate/starting template</p>
+<p><a href="https://github.com/maximegris/angular-electron.git">https://github.com/maximegris/angular-electron.git</a></p>
+</li>
+<li><p>Google for the Angular platform.</p>
+</li>
+<li><p>And the Electron team for making such a powerful yet easy to use platform.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

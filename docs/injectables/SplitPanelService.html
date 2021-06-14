@@ -1,0 +1,529 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/Vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>SplitPanelService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/tabs/tab/split-panel.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#splitPanelContent">splitPanelContent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addPanel">addPanel</a>
+                            </li>
+                            <li>
+                                <a href="#getPanels">getPanels</a>
+                            </li>
+                            <li>
+                                <a href="#removePanel">removePanel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addPanel"></a>
+                    <span class="name">
+                        <b>
+                            addPanel
+                        </b>
+                        <a href="#addPanel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addPanel(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, component: <a href="../components/TerminalComponent.html">TerminalComponent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/tabs/tab/split-panel.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a new terminal &quot;panel&quot; to the tab. Unfortunately, we need
+to limit the user to upto 2 additional terminals (in addition to the original).
+If more than 3 terminals exist inside one tab, Bootstrap does not seem to render
+the columns properly.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id to be associated with a given panel.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>component</td>
+                                    <td>
+                                                <code><a href="../components/TerminalComponent.html" target="_self" >TerminalComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the terminal component being added to the split panel.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SplitPanel.html" target="_self" >Observable&lt;SplitPanel[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable containing the new splitPanelContent array.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPanels"></a>
+                    <span class="name">
+                        <b>
+                            getPanels
+                        </b>
+                        <a href="#getPanels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPanels()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/tabs/tab/split-panel.service.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the initial number of terminals to be displayed in the panel.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SplitPanel.html" target="_self" >Observable&lt;SplitPanel[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable which contains a SplitPanel array.
+This array holds the current number of terminals.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removePanel"></a>
+                    <span class="name">
+                        <b>
+                            removePanel
+                        </b>
+                        <a href="#removePanel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removePanel(panelToRemove: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/tabs/tab/split-panel.service.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove a selected panel from the split panel.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>panelToRemove</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the panel to be removed from the split panel</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SplitPanel.html" target="_self" >Observable&lt;SplitPanel[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="splitPanelContent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            splitPanelContent</b>
+                            <a href="#splitPanelContent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/SplitPanel.html" target="_self" >SplitPanel[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+		{ id: 0, component: TerminalComponent }
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/tabs/tab/split-panel.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>To start, each tab component will have only one tab.
+Each additional &quot;split&quot; of the panel will and a new terminal to the splitPanelContent
+array. Each new terminal must have an id, and be of type TerminalComponent.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;
+import { SplitPanel } from &quot;@shared/models/split-panel.model&quot;
+import { Observable, of } from &quot;rxjs&quot;
+import { TerminalComponent } from &quot;@terminal/terminal.component&quot;
+
+@Injectable({ providedIn: &quot;root&quot;})
+
+/** This service will allow the user to add up to 2 additional
+ * terminals to any given ng-xterm-tab-component.
+ * */
+export class SplitPanelService {
+
+	/**
+	 * To start, each tab component will have only one tab.
+	 * Each additional &quot;split&quot; of the panel will and a new terminal to the splitPanelContent
+	 * array. Each new terminal must have an id, and be of type TerminalComponent.
+	 * */
+	private splitPanelContent: SplitPanel[] &#x3D; [
+		{ id: 0, component: TerminalComponent }
+	]
+
+	/**
+	 * Get the initial number of terminals to be displayed in the panel.
+	 *
+	 * @returns an observable which contains a SplitPanel array.
+	 * This array holds the current number of terminals.
+	 * */
+	getPanels(): Observable&lt;SplitPanel[]&gt; {
+		return of(this.splitPanelContent)
+	}
+
+	/**
+	 * Add a new terminal &quot;panel&quot; to the tab. Unfortunately, we need
+	 * to limit the user to upto 2 additional terminals (in addition to the original).
+	 * If more than 3 terminals exist inside one tab, Bootstrap does not seem to render
+	 * the columns properly.
+	 *
+	 * @param {number} id the id to be associated with a given panel.
+	 * @param {TerminalComponent} component the terminal component being added to the split panel.
+	 *
+	 * @returns an observable containing the new splitPanelContent array.
+	 * */
+	addPanel(id: number, component: TerminalComponent): Observable&lt;SplitPanel[]&gt; {
+		// make sure there are not more than 3 terminals inside the panel
+		if(this.splitPanelContent.length &gt; 3) {
+			alert(&quot;There cannot be more than 3 terminals inside one tab.&quot;)
+			return
+		}
+		// if there are less than 3, add the new terminal id, and component to the array.
+		this.splitPanelContent.push({ id, component })
+		// return the observable containing the current split panel content
+		return of(this.splitPanelContent)
+	}
+
+	/**
+	 * Remove a selected panel from the split panel.
+	 * @param {number} panelToRemove the panel to be removed from the split panel
+	 * */
+	removePanel(panelToRemove: number): Observable&lt;SplitPanel[]&gt; {
+		if(this.splitPanelContent.length &#x3D;&#x3D;&#x3D; 1) {
+			alert(&quot;The first panel cannot be removed&quot;)
+			return
+		}
+		return of(this.splitPanelContent.splice(panelToRemove, 1))
+	}
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SplitPanelService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

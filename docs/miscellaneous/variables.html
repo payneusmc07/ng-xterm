@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/Vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#appHelper" title="main.ts"><b>appHelper</b>&nbsp;&nbsp;&nbsp;(main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#appSettingsStore" title="lib/store-factory.ts"><b>appSettingsStore</b>&nbsp;&nbsp;&nbsp;(lib/.../store-factory.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createContextMenu" title="lib/menu-factory.ts"><b>createContextMenu</b>&nbsp;&nbsp;&nbsp;(lib/.../menu-factory.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createWindow" title="lib/window-factory.ts"><b>createWindow</b>&nbsp;&nbsp;&nbsp;(lib/.../window-factory.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.dev.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.dev.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#loadURL" title="main.ts"><b>loadURL</b>&nbsp;&nbsp;&nbsp;(main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#locations" title="src/shared/utils/constants.ts"><b>locations</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#mainWindow" title="main.ts"><b>mainWindow</b>&nbsp;&nbsp;&nbsp;(main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#operatingSystems" title="src/shared/utils/constants.ts"><b>operatingSystems</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#" title="lib/menu-factory.ts"><b></b>&nbsp;&nbsp;&nbsp;(lib/.../menu-factory.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>main.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appHelper"></a>
+                        <span class="name">
+                            <b>
+                            appHelper</b>
+                            <a href="#appHelper"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new AppHelper()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadURL"></a>
+                        <span class="name">
+                            <b>
+                            loadURL</b>
+                            <a href="#loadURL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>serve({ directory: &quot;dist&quot; })</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Configure the directory where electron-serve will look for
+the static index.html file to serve when the app is
+built for production.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mainWindow"></a>
+                        <span class="name">
+                            <b>
+                            mainWindow</b>
+                            <a href="#mainWindow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BrowserWindow</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A &quot;global&quot; reference to the mainWindow object.
+This is used to prevent the window from randomly being destroyed
+by JS/TS garbage collector .</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/store-factory.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appSettingsStore"></a>
+                        <span class="name">
+                            <b>
+                            appSettingsStore</b>
+                            <a href="#appSettingsStore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Store({
+	name: &quot;app-settings&quot;,
+	watch: true,
+	fileExtension: &quot;yaml&quot;,
+	serialize: yaml.dump,
+	deserialize: yaml.load,
+	schema: {
+		backgroundTransparency: {
+			type: &quot;number&quot;,
+			default: 0.90
+		},
+		backgroundColor: {
+			default: &quot;#263137&quot;
+		}
+	}
+})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/menu-factory.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createContextMenu"></a>
+                        <span class="name">
+                            <b>
+                            createContextMenu</b>
+                            <a href="#createContextMenu"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(browserWindow: BrowserWindow): Menu &#x3D;&gt;{
+	let tabID: number
+	let panelID: number
+
+	const contextMenu &#x3D; Menu.buildFromTemplate([
+		{
+			label: &quot;Developer&quot;,
+			submenu: [
+				{
+					label: &quot;Open Dev Tools&quot;,
+					click: () &#x3D;&gt; browserWindow?.webContents.openDevTools({ mode: &quot;undocked&quot; })
+				},
+				{
+					label: &quot;Clear Clipboard&quot;,
+					click: () &#x3D;&gt; clipboard.clear(&quot;clipboard&quot;)
+				},
+				{
+					label: &quot;Reload Window&quot;,
+					click: () &#x3D;&gt; browserWindow?.reload()
+				},
+				{
+					label: &quot;Documentation&quot;,
+					click: async () &#x3D;&gt; await shell.openExternal(&quot;&quot;)
+				}
+			]
+		},
+		{ type: &quot;separator&quot; },
+		{
+			label: &quot;Terminal&quot;,
+			submenu: [
+				{
+					label: &quot;Clear Buffer&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.CLEAR_TERMINAL)
+				},
+				{
+					label: &quot;Select All&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.SELECT_ALL)
+				},
+				{
+					label: &quot;Open Selection as URL&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.OPEN_SELECTION)
+				},
+				{
+					label: &quot;Save Selection As Snippet&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.SAVE_SELECTION)
+				},
+				{
+					label: &quot;Save Selection To File&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.SAVE_SELECTION_TO_FILE)
+				},
+
+				{type: &quot;separator&quot;},
+				{
+					label: &quot;Add Tab&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.NEW_TAB)
+				},
+				{
+					label: &quot;Remove Focused Tab&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.REMOVE_TAB)
+				},
+				{type: &quot;separator&quot;},
+				{
+					label: &quot;Split Panel&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.ADD_PANEL, panelID)
+				},
+				{
+					label: &quot;Remove Focused Panel&quot;,
+					click: () &#x3D;&gt; browserWindow.webContents.send(IPCChannelNames.REMOVE_FOCUSED_PANEL, panelID)
+				},
+			]
+		},
+		{ type: &quot;separator&quot; },
+		{
+			label: &quot;Extras&quot;,
+			submenu: [
+				// integrations
+				{
+					label: &quot;Integrations&quot;,
+					submenu: [
+						{
+							label: &quot;Install Shell Integrations&quot;,
+							click: async () &#x3D;&gt; await AppHelper.handleShellIntegrationInstallationOrRemoval(browserWindow, &quot;install&quot;)
+						},
+						{
+							label: &quot;Uninstall Shell Integrations&quot;,
+							click: async () &#x3D;&gt; await AppHelper.handleShellIntegrationInstallationOrRemoval(browserWindow, &quot;uninstall&quot;)
+						},
+					],
+				},
+				{type: &quot;separator&quot;},
+				// fonts
+				{
+					label: &quot;Fonts&quot;,
+					submenu: [
+						{
+							label: &quot;Install Powerline Fonts&quot;,
+							click: () &#x3D;&gt; AppHelper.handleFontInstallationOrRemoval(browserWindow,&quot;install&quot;)
+						},
+						{
+							label: &quot;Uninstall Powerline Fonts&quot;,
+							click: () &#x3D;&gt; AppHelper.handleFontInstallationOrRemoval(browserWindow,&quot;uninstall&quot;)
+						},
+					]
+				}
+			],
+		},
+		{ type: &quot;separator&quot; },
+		{ role: &quot;copy&quot; },
+		{ role: &quot;paste&quot; },
+		{ role: &quot;delete&quot; },
+		{ type: &quot;separator&quot; },
+		{ role: &quot;quit&quot; }
+	])
+	browserWindow?.webContents.on(&quot;context-menu&quot;, () &#x3D;&gt; contextMenu.popup())
+	return contextMenu
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A helper class which contains two static member methods to create a tray and context menu.
+Leaving these methods as static allows for them to be imported and used without
+needing to instantiate a new instance of the class</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name=""></a>
+                        <span class="name">
+                            <b>
+                            </b>
+                            <a href="#"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>TouchBar</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>lib/window-factory.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createWindow"></a>
+                        <span class="name">
+                            <b>
+                            createWindow</b>
+                            <a href="#createWindow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(windowName: string, options: BrowserWindowConstructorOptions): BrowserWindow &#x3D;&gt; {
+	const key &#x3D; &quot;window-state&quot;
+	const name &#x3D; &#x60;window-state-${windowName}&#x60;
+	const store &#x3D; new Store({name})
+	const defaultSize &#x3D; {
+		width: options.width,
+		height: options.height,
+	}
+	let state &#x3D; {}
+	let win
+
+	const restore &#x3D; () &#x3D;&gt; store.get(key, defaultSize)
+
+	const getCurrentPosition &#x3D; () &#x3D;&gt; {
+		const position &#x3D; win.getPosition()
+		const size &#x3D; win.getSize()
+		return {
+			x: position[0],
+			y: position[1],
+			width: size[0],
+			height: size[1],
+		}
+	}
+
+	const windowWithinBounds &#x3D; (windowState, bounds) &#x3D;&gt; {
+		return (
+			windowState.x &gt;&#x3D; bounds.x &amp;&amp;
+			windowState.y &gt;&#x3D; bounds.y &amp;&amp;
+			windowState.x + windowState.width &lt;&#x3D; bounds.x + bounds.width &amp;&amp;
+			windowState.y + windowState.height &lt;&#x3D; bounds.y + bounds.height
+		)
+	}
+
+	const resetToDefaults &#x3D; () &#x3D;&gt; {
+		const bounds &#x3D; screen.getPrimaryDisplay().bounds
+		return Object.assign({}, defaultSize, {
+			x: (bounds.width - defaultSize.width) / 2,
+			y: (bounds.height - defaultSize.height) / 2,
+		})
+	}
+
+	const ensureVisibleOnSomeDisplay &#x3D; windowState &#x3D;&gt; {
+		const visible &#x3D; screen.getAllDisplays().some(display &#x3D;&gt; {
+			return windowWithinBounds(windowState, display.bounds)
+		})
+		if (!visible) {
+			// Window is partially or fully not visible now.
+			// Reset it to safe defaults.
+			return resetToDefaults()
+		}
+		return windowState
+	}
+
+	const saveState &#x3D; () &#x3D;&gt; {
+		try {
+			if (!win.isMinimized() &amp;&amp; !win.isMaximized()) {
+				Object.assign(state, getCurrentPosition())
+			}
+			store.set(key, state)
+		}
+		catch (e) {
+			console.log(e)
+		}
+	}
+
+	state &#x3D; ensureVisibleOnSomeDisplay(restore())
+
+	const browserOptions: BrowserWindowConstructorOptions &#x3D; {
+		...options,
+		...state,
+		frame: false,
+		minWidth: 675,
+		minHeight: 450,
+		acceptFirstMouse: true,
+		vibrancy: process.platform &#x3D;&#x3D;&#x3D; &quot;darwin&quot; ? &quot;window&quot; : null,
+		visualEffectState: process.platform &#x3D;&#x3D;&#x3D; &quot;darwin&quot; ? &quot;active&quot; : null,
+		webPreferences: {
+			nodeIntegration: true,
+			allowRunningInsecureContent: false,
+			nodeIntegrationInWorker: true,
+			contextIsolation: false,
+			...options.webPreferences,
+		},
+	}
+	win &#x3D; new BrowserWindow(browserOptions)
+
+	win.on(&quot;close&quot;, saveState)
+
+	return win
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.dev.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+	production: false,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Define the Angular environment as &quot;development&quot; </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+	production: true
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Define the Angular environment as &quot;production&quot; </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+	production: false
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This file can be replaced during build by using the <code>fileReplacements</code> array.
+<code>ng build --prod</code> replaces <code>environment.ts</code> with <code>environment.prod.ts</code>.</p>
+<p>The list of file replacements can be found in <code>angular.json</code>.
+For easier debugging in development mode, you can import the following file
+to ignore zone related error stack frames such as <code>zone.run</code>, <code>zoneDelegate.invokeTask</code>.</p>
+<p>This import should be commented out in production mode because it will have a negative impact
+on performance if an error is thrown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/shared/utils/constants.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locations"></a>
+                        <span class="name">
+                            <b>
+                            locations</b>
+                            <a href="#locations"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+	/** path to the configuration directory */
+	CONFIG_DIRECTORY: &#x60;${process.env.HOME}/.ng-xterm&#x60;,
+
+	/** path to the snippets file */
+	SNIPPETS_FILE: &#x60;${process.env.HOME}/.ng-xterm/snippets.txt&#x60;,
+
+	/** path to the fonts directory */
+	FONTS_DIRECTORY: &#x60;${process.env.HOME}/.ng-xterm/fonts&#x60;,
+
+	HOME_DIRECTORY: process.env.HOME,
+
+	TERMINAL_OUTPUT_FILE: &#x60;${process.env.HOME}/saved-terminal-buffer.txt&#x60;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>globally defined constants which point to various locations in the app. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="operatingSystems"></a>
+                        <span class="name">
+                            <b>
+                            operatingSystems</b>
+                            <a href="#operatingSystems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+	IS_MAC: process.platform &#x3D;&#x3D;&#x3D; &quot;darwin&quot;,
+	IS_WINDOWS: process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot;,
+	IS_LINUX: process.platform &#x3D;&#x3D;&#x3D; &quot;linux&quot;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>globally defined constants which define the hosting operating system </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
