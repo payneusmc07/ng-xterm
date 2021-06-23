@@ -4,9 +4,8 @@
 
 .navigation-clean {
 	width: 100%;
-	height: 45px;
-	z-index: 1;
-	position: fixed;
+	height: 40px;
+	//z-index: 1;
 
 	.active {
 		color: #ddd9df;
@@ -34,14 +33,13 @@
 		width: 45px;
 		z-index: 1;
 		height: 35px;
-		color: white;
+		color: gainsboro;
 		margin-right: -0.5rem;
 		border-top-color: transparent !important;
 		background-color: black;
 		border-radius: 5px;
 		font-size: 14px;
 		font-weight: bold;
-		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -65,8 +63,8 @@
 
 		width: 120px;
 		height: 40px;
-		margin-left: -1.5rem;
-		margin-top: -15px;
+		margin-left: -.5rem;
+		margin-top: -5px;
 		border-left-color: transparent !important;
 		background-color: black !important;
 		border-radius: 5px;
@@ -212,6 +210,10 @@
 
 	.hidden {
 		display: none;
+	}
+
+	.nav-settings, .nav-integrations {
+		font-size: 14px !important;
 	}
 
 }

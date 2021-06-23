@@ -1,8 +1,8 @@
 {
 	"extends": "../tsconfig.json",
 	"compilerOptions": {
-		"outDir": "../out-tsc/app",
 		"module": "es2020",
+		"target": "ES5",
 		"incremental": true,
 		"resolveJsonModule": true,
 		"allowSyntheticDefaultImports": true,
@@ -19,13 +19,19 @@
 			"dom"
 		],
 		"paths": {
+			"@shared/*": ["shared/*"],
 			"@tabs/*": ["tabs/*"],
 			"@task-list/*": ["task-list/*"],
-			"@shared/*": ["shared/*"],
 			"@services/*": ["shared/services/*"],
 			"@utils/*": ["shared/utils/*"],
+			"@snippets/*": ["snippets/*"],
 			"@terminal/*": ["terminal/*"],
-			"@settings/*": ["settings/*"]
+			"@settings/*": ["settings/*"],
+			"@misc/*": ["settings/misc/*"],
+			"@general/*": ["settings/general/*"],
+			"@advanced/*": ["settings/advanced/*"],
+			"@app/*": ["app/*"],
+			"@environments/*": ["environments/*"]
 		},
 		"types": []
 	},

@@ -2,17 +2,12 @@
 
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
 
-![](https://img.shields.io/badge/maintained-yes-brightgreen) [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/payneusmc07/ng-xterm/tree/de6a157501aa2f9b08fd9733d24ed9d0df751e54/LICENSE.md)
-
-[![](https://github.com/maximegris/angular-electron/workflows/Linux%20Build/badge.svg)](https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Linux+Build%22) [![](https://github.com/maximegris/angular-electron/workflows/MacOS%20Build/badge.svg)](https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22MacOS+Build%22) [![](https://github.com/maximegris/angular-electron/workflows/Windows%20Build/badge.svg)](https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Windows+Build%22)
-
-### Introduction
 
 As a Linux and Mac OS user (mostly Mac), I spend a lot of time at the terminal. While there are several amazing terminal emulators available such as **Hyper** and **iTerm2**, I wanted to build my own.
 
 ### Currently Versions:
 
-* Angular v12.0.3
+* Angular v12.0.4
 * Electron v13.1.1
 * Electron Builder v22.10.5
 
@@ -155,6 +150,14 @@ With this in mind, I know some of you may feel the amount of documentation/comme
 
 # Common Questions
 
+* Why are some of the function names so long?
+
+Those of you familiar with Objective C/Swift background know how "verbose" the function names/parameters can be. 
+  And seeing as I am also an Objective C/Swift, I brought that convention over with me, mostly
+out of habit, but I feel it makes it easier to understand what the code is doing
+since some of its functionality is described in the function/method name.
+
+
 * Why are certain class members not marked as private when they
   can or should be?
 
@@ -213,7 +216,7 @@ This page is meant as more of a walkthrough/demo.
 import { Component, OnInit } from "@angular/core"
 import { FormControl, FormGroup } from "@angular/forms"
 import { SettingsService } from "@shared/services"
-import { AppSettings } from "@shared/utils"
+import { Settings } from "@shared/utils"
 
 @Component({
 	selector: "ng-xterm-tab-settings",
@@ -250,7 +253,7 @@ export class TabSettingsComponent implements OnInit {
 		this.settingsService = new SettingsService()
 		
 		// retrieve the background color from the settings store. and type cast it to a string
-		this.tabBackgroundColor = this.settingsService.getItem( AppSettings.TAB_BG_COLOR) as string
+		this.tabBackgroundColor = this.settingsService.getItem( Settings.TAB_BG_COLOR) as string
 		
 		this.tabSettingsForm = new FormGroup({
 			// the name of the form control: instantiate a new FormControl with an optional default value

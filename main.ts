@@ -5,8 +5,8 @@ import {
 	createWindow,
 	appSettingsStore,
 	AppHelper
-} from "./lib"
-import { AppSettings, IPCChannelNames } from "./src/shared"
+} from "./main-lib"
+import { IPCChannelNames, Settings } from "./src/shared/utils"
 
 /**
  * A "global" reference to the mainWindow object.
@@ -14,13 +14,12 @@ import { AppSettings, IPCChannelNames } from "./src/shared"
  * by JS/TS garbage collector .
  */
 let mainWindow: BrowserWindow = null
-
 /**
  * Configure the directory where electron-serve will look for
  * the static index.html file to serve when the app is
  * built for production.
  */
-const loadURL = serve({ directory: "dist" })
+const loadURL = serve({ directory: "dist", scheme: "ng-xterm" })
 
 // instantiate a new instance of the AppHelper class
 const appHelper = new AppHelper()
@@ -36,7 +35,8 @@ app.on("ready", async(): Promise<BrowserWindow> => {
 	 */
 	mainWindow = createWindow("ng-xterm", {
 		backgroundColor: appSettingsStore.get("backgroundColor") as string,
-		opacity: +appSettingsStore.get("backgroundTransparency")
+		opacity: +appSettingsStore.get("backgroundTransparency"),
+		tabbingIdentifier: "mainWindow"
 	})
 
 	// Based on the environment, either load the dev url environment variable,
@@ -45,58 +45,63 @@ app.on("ready", async(): Promise<BrowserWindow> => {
 		? await mainWindow.loadURL(process.env.DEV_URL)
 		: await loadURL(mainWindow)
 
-	//  show the window
+	// show the window on the "ready-to-show" event
 	mainWindow.on("ready-to-show", () => mainWindow.show())
 
-	// dispose of any active ipcMain event listeners so we don't cause memory leaks
+	// dispose of any active ipcMain event listeners
+	// and unregister any app wide shortcuts so we don't cause memory leaks
 	mainWindow.on("closed", () => {
-		ipcMain.removeAllListeners(IPCChannelNames.SET_BG_TRANSPARENCY)
-		ipcMain.removeAllListeners(IPCChannelNames.SET_BG_COLOR)
-		ipcMain.removeAllListeners(IPCChannelNames.RESET_WINDOW)
-		ipcMain.removeAllListeners(IPCChannelNames.MINIMIZE_WINDOW)
-		ipcMain.removeAllListeners(IPCChannelNames.MAXIMIZE_WINDOW)
-		ipcMain.removeAllListeners(IPCChannelNames.CLOSE_WINDOW)
+		appHelper.unRegisterShortCuts()
 		mainWindow = null
 	})
 
 	// create the application context menu
 	createContextMenu(mainWindow)
 
-	// check for application updates
-	await appHelper.checkForUpdates()
+	// if automatic updates are enabled, check for updates
+	if(appSettingsStore.get(Settings.AUTO_UPDATE) === true) {
+		await appHelper.checkForUpdates()
+	}
 
 	// register global application shortcuts
 	appHelper.registerShortcuts(mainWindow)
 
 	return mainWindow
 })
-app.on("will-quit", () => appHelper.unRegisterShortCuts())
+
+// when the "quit" event is emitted, quit the app
 app.on("quit", () => app.quit())
 
-/** IPC */
-// handle ipcRenderer invocation to set the app background transparency
-ipcMain.handle(IPCChannelNames.SET_BG_TRANSPARENCY, async (event, args) => {
-	console.log("transparency set to: ", args)
-	appSettingsStore.set(AppSettings.APP_BG_TRANSPARENCY, args)
-	mainWindow.setOpacity(args)
+ipcMain.handle(IPCChannelNames.AUTO_UPDATE, (event,  args: boolean) => {
+	if(process.env.NODE_ENV === "development") {
+		console.log("auto updates set to: ", args)
+		appSettingsStore.set(Settings.AUTO_UPDATE, args as boolean)
+	}
 })
 
-// handle ipcRenderer invocation to set the app background background color
-ipcMain.handle(IPCChannelNames.SET_BG_COLOR, (event, args) => {
-	console.log("background color set to: ", args)
-	appSettingsStore.set(AppSettings.APP_BG_COLOR, args)
+ipcMain.handle(IPCChannelNames.SET_BACKGROUND_TRANSPARENCY, async (event, args) => {
+	if(process.env.NODE_ENV === "development") {
+		console.log("transparency set to: ", args)
+	}
+	appSettingsStore.set(Settings.TERM_BG_TRANSPARENCY, args)
+	mainWindow.setOpacity(+args)
+})
+
+ipcMain.handle(IPCChannelNames.SET_BACKGROUND_COLOR, (event, args) => {
+	if(process.env.NODE_ENV === "development") {
+		console.log("background color set to: ", args)
+	}
+	appSettingsStore.set(Settings.TERM_BG_COLOR, args)
 	mainWindow.setBackgroundColor(String(args))
 })
 
-// handle ipcRenderer invocation to set the app background transparency
-ipcMain.handle(IPCChannelNames.RESET_WINDOW, () => mainWindow.reload())
-
-// handle ipcRenderer invocation to minimize the app window
+ipcMain.handle(IPCChannelNames.CLOSE_WINDOW, () => app.quit() )
 ipcMain.handle(IPCChannelNames.MINIMIZE_WINDOW, () => mainWindow.minimize())
 
-// handle ipcRenderer invocation to maximize the app window
-ipcMain.handle(IPCChannelNames.MAXIMIZE_WINDOW, () => mainWindow.isFullScreen() ? mainWindow.setFullScreen(false) : mainWindow.setFullScreen(true))
+ipcMain.handle(IPCChannelNames.MAXIMIZE_WINDOW, () => {
+	mainWindow.isFullScreen()
+		? mainWindow.setFullScreen(false)
+		: mainWindow.setFullScreen(true)
+})
 
-// handle ipcRenderer invocation to quit the app
-ipcMain.handle(IPCChannelNames.CLOSE_WINDOW, () => app.quit())
 

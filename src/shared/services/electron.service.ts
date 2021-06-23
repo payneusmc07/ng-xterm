@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core"
+import { IPCChannelNames } from "@shared/utils"
 import { ipcRenderer, shell } from "electron"
 import * as os from "os"
 
@@ -23,24 +24,49 @@ import * as os from "os"
  */
 export class ElectronService {
 
-	/** type context for the Electron.ipcRenderer module */
+	/** Type context for the Electron.ipcRenderer module. */
 	ipcRenderer: typeof ipcRenderer
 
-	/** type context for the os module */
+	/** Type context for the os module. */
 	os: typeof os
 
-	/** type context for the Electron.shell module */
+	/** Type context for the Electron.shell module. */
 	shell: typeof shell
 
+	/**
+	 * By using window.require, the modules inside in the
+	 * constructor body can be used in the renderer (Angular)
+	 * process.
+	 * @see ./typings.d.ts
+	 * */
 	constructor() {
-		/**
-		 * By using window.require, the modules inside in the
-		 * constructor body can be used in the renderer (Angular)
-		 * process.
-		 * @see ./typings.d.ts
-		 * */
 		this.ipcRenderer = window.require("electron").ipcRenderer
 		this.shell = window.require("electron").shell
 		this.os = window.require("os")
+	}
+
+	/**
+	 * Invoke the main processes to perform an action on the renderer processes behalf
+	* @param {IPCChannelNames} channel the channel name which the main process will listen for the invocation.
+	* @param {string} args any arguments to be sent and processed by the main process.
+	* @returns {Promise}: a promise by the main processes to perform the requested action
+	*/
+	async rendererInvokeMainToPerformAction(channel: IPCChannelNames, ...args: any[]): Promise<void> {
+		try {
+			await this.ipcRenderer.invoke(channel, args)
+		}
+		catch (e) {
+			alert(e)
+		}
+	}
+
+	/**
+	 * Use a specific channel to send an ipc message to the main process.
+	 * @param{IPCChannelNames} channel the channel name which the main process will listen for message.
+	 * @param {string} args any arguments to be sent and processed by the main process.
+	 * @returns
+	*/
+	rendererSendMessageToMain(channel: IPCChannelNames, args?: string) {
+		this.ipcRenderer.send(channel, args)
 	}
 }

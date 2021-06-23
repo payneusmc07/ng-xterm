@@ -1,12 +1,7 @@
 @import "src/styles/variables";
 
-* {
-	font-family: "Hack Nerd Font", sans-serif;
-}
-
 .nav-pills {
 	overscroll-behavior: contain;
-	margin-top: 2.5rem;
 	margin-left: 2px;
 	position: relative;
 }
@@ -22,31 +17,22 @@
 	background-color: black;
 	border-radius: 5px;
 }
-.custom-tab {
+.custom-tab, .bi {
+	color: grey;
 	a.active.nav-link {
 		color: whitesmoke;
+		background-color: transparent !important;
 		//background-color: #471fd6 !important;
 	}
 }
 
-a.nav-link {
-	display: flex;
-	justify-content: center;
-	color: #5c5c5c;
-}
-
-a.active.nav-link {
-	color: whitesmoke;
-	//background-color: #471fd6 !important;
-}
-
-.nav-item {
-	text-align: center;
-}
 
 .bi {
 	@include adjustIcons
 }
-.bi-gear-fill, .bi-paint-bucket {
+
+.bi-gear-fill,
+.bi-puzzle-fill {
 	margin-left: 5px;
 }
+

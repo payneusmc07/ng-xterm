@@ -1,0 +1,79 @@
+<div class="form-group" [formGroup]="advancedTerminalControlsForm">
+	<label class="form-label text-white position-absolute bottom-0 start-50 translate-middle-x">*Requires A Window Reload To Take Effect</label>
+	<div class="row row-cols-3 mb-3 justify-content-evenly">
+		<div class="col">
+			<label class="form-label text-white">*Shell Type</label>
+
+			<!-- Unix shells -->
+			<select class="form-control form-control-sm text-white border-secondary"
+			        formControlName="shell-type"
+			        (change)="setShellType(advancedTerminalControlsForm.get('shell-type').value)"
+			        [value]="unixShells">
+				<option *ngFor="let shell of unixShells"
+				        [ngValue]="shell">{{ shell }}</option>
+			</select>
+
+		</div>
+
+		<!-- terminal type, only show if we are not running on Windows -->
+		<div class="col">
+			<label class="form-label text-white">*Terminal Type</label>
+			<select class="form-control form-control-sm border-secondary text-white terminal-type"
+			        [value]="unixTerminals"
+			        (change)="setTerminalType(advancedTerminalControlsForm.get('terminal-type').value)"
+			        formControlName="terminal-type"
+			>
+				<option *ngFor="let terminal of unixTerminals"
+				        [ngValue]="terminal">{{ terminal }}</option>
+			</select>
+		</div>
+
+		<!-- customTitle -->
+		<div class="col">
+			<label class="form-label text-white">*Custom Title</label>
+			<input
+				(change)="setCustomTerminalTitle(advancedTerminalControlsForm.get('custom-title').value)"
+				formControlName="custom-title"
+				[value]="customWindowTitle"
+				placeholder="custom title"
+				type="text"
+				class="form-control form-control-sm bg-dark border-secondary text-white">
+		</div>
+	</div>
+
+	<div class="row row-cols-3 justify-content-evenly">
+		<!-- scrollback  -->
+		<div class="col">
+			<label class="form-label text-white">*Terminal Scrollback</label>
+			<input
+				(change)="setLinesOfScrollback(advancedTerminalControlsForm.get('lines-of-scrollback').value)"
+				formControlName="lines-of-scrollback"
+				[value]="linesOfScrollback"
+				type="number"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white w-50">
+		</div>
+		<!-- pty cols -->
+		<div class="col">
+			<label class="form-label text-white">*Columns</label>
+			<input
+				(change)="setPTYCols(advancedTerminalControlsForm.get('pty-cols').value)"
+				formControlName="pty-cols"
+				[value]="ptyColumns"
+				type="number"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white w-50">
+		</div>
+		<!-- pty rows -->
+		<div class="col">
+			<label class="form-label text-white">*Rows</label>
+			<input
+				(change)="setPTYRows(advancedTerminalControlsForm.get('pty-rows').value)"
+				formControlName="pty-rows"
+				[value]="ptyRows"
+				type="number"
+				step="1"
+				class="form-control form-control-sm bg-dark border-secondary text-white w-50">
+		</div>
+	</div>
+</div>

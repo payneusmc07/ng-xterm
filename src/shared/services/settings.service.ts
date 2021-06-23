@@ -1,71 +1,79 @@
 import { Injectable } from "@angular/core"
-import { ElectronService } from "../services/electron.service"
-import { IPCChannelNames } from "../utils"
+import { BehaviorSubject } from "rxjs"
 import Store from "electron-store"
 
 @Injectable({ providedIn: "root" })
 
 /**
  * A helper class to get or set the application wide settings.
+ * The store uses Subscriptions and Behavior subjects for settings
+ * related to the terminal theme. The benefit of this is each time a value
+ * in the store is changed, the new value will be applied to the
+ * terminal in real time through the terminal?.setOption() call.
  *
- * In order to make Typescript happy, we need to follow
- * the default initialization scheme for ElectronStore,
- *
- * ElectronStore<{key: string, value: unknown}>
- *
- * While it is annoying and tedious to do things this way,
- * It is better than setting store to "any"
+ * However this only applies to "theme" related settings
+ * (i.e. background, foreground, etc). Other settings such as the
+ * type of session, rows, and columns used by the underlying pty/terminal
+ * will require a window reload, as those cannot be properly
+ * updated in real time.
  * */
 export class SettingsService {
-	store: Store<{
-		appBackgroundTransparency: unknown
-		appBackgroundColor: unknown
-		antiAliasedFonts: unknown
+
+	/** Since Electron store returns an "unknown" type, to provide some
+	 * level of type safety, we can use the default initialization
+	 * scheme provided by ElectronStore,
+	 * ```
+	 * ElectronStore<{key: string, value: unknown}>
+	 *```*/
+	private store: Store<{
+		autoUpdate: unknown
 		customTerminalTitle: unknown
 		darkMacTrafficLights: unknown
 		fontSize: unknown
 		linesOfTerminalScrollback: unknown
 		ptyRows: unknown
 		ptyCols: unknown
-		showTooltips: unknown
-		tabBackgroundColor: unknown
-		tabForegroundColor: unknown
-		terminalBackgroundColor: unknown
 		terminalCursorColor: unknown
 		terminalCursorStyle: unknown
 		terminalCursorAccentColor: unknown
 		terminalCursorBlink: unknown
-		terminalShellType: unknown
+		shellType: unknown
+		terminalBackgroundTransparency: unknown
+		terminalBackgroundColor: unknown
 		terminalType: unknown
-		terminalRenderer: unknown
 		terminalFontSize: unknown
 		terminalLineHeight: unknown
 		terminalLetterSpacing: unknown
 		terminalSelectionColor: unknown
 		terminalForegroundColor: unknown
 		terminalFont: unknown
-		topbarIconSize: unknown
-		topbarIconColor: unknown
 		windowsStyleControls: unknown
 		windowControlStyle: unknown
 	}>
 
-	constructor(private readonly electronService: ElectronService) {
+	terminalFontSizeSubject =  new BehaviorSubject(13)
+	windowControlSubject = new BehaviorSubject(null)
+	cursorStyleSubject = new BehaviorSubject("block")
+	cursorBlinkSubject = new BehaviorSubject(false)
+	terminalLetterSpacingSubject = new BehaviorSubject(1)
+	terminalLineHeightSubject = new BehaviorSubject(1.2)
+
+	constructor() {
+		// configure the terminal settings store
 		this.store = new Store({
 			name: "terminal-settings",
 			watch: true,
 			schema: {
-				appBackgroundTransparency: {
+				autoUpdate: {
+					default: true
+				},
+				terminalBackgroundTransparency: {
 					type: "number",
 					default: 0.90
 				},
-				appBackgroundColor: {
+				terminalBackgroundColor: {
 					type: "string",
 					default: "#18242f"
-				},
-				antiAliasedFonts: {
-					type: "boolean",
-					default: false
 				},
 				customTerminalTitle: {
 					type: "string",
@@ -79,10 +87,6 @@ export class SettingsService {
 					type: "number",
 					default: 13
 				},
-				showTooltips: {
-					type: "boolean",
-					default: false
-				},
 				linesOfTerminalScrollback: {
 					type: "number",
 					default: 100
@@ -95,14 +99,6 @@ export class SettingsService {
 					type: "number",
 					default: 25
 				},
-				tabBackgroundColor: {
-					type: "string",
-					default: "#47bedb"
-				},
-				terminalBackgroundColor: {
-					type: "string",
-					default: "#18242f"
-				},
 				terminalCursorAccentColor: {
 					type: "string",
 					default: "#47bedb"
@@ -113,19 +109,15 @@ export class SettingsService {
 				},
 				terminalCursorColor: {
 					type: "string",
-					default:"#47bedb"
+					default: "#47bedb"
 				},
 				terminalCursorStyle: {
 					type: "string",
 					default: "block"
 				},
-				tabForegroundColor: {
-					type: "string",
-					default: "#dbf4fa"
-				},
 				terminalFont: {
 					type: "string",
-					default: process.platform === "darwin" ? "Menlo" : ""
+					default: "Hack Nerd Font"
 				},
 				terminalForegroundColor: {
 					type: "string",
@@ -147,25 +139,13 @@ export class SettingsService {
 					type: "number",
 					default: 1
 				},
-				terminalRenderer: {
-					type: "string",
-					default: "dom"
-				},
 				terminalSelectionColor: {
 					type: "string",
 					default: "#47bedb"
 				},
-				terminalShellType: {
+				shellType: {
 					type: "string",
-					default: "zsh"
-				},
-				topbarIconSize: {
-					type: "number",
-					default: 13
-				},
-				topbarIconColor: {
-					type: "string",
-					default: "#dbf4fa"
+					default: process.env.SHELL
 				},
 				windowsStyleControls: {
 					type: "boolean",
@@ -173,28 +153,29 @@ export class SettingsService {
 				},
 				windowControlStyle: {
 					type: "string",
-					default: process.platform === "darwin" ? "mac" : "windows"
+					default:  "mac"
 				}
 			}
 		})
 	}
 
 	/**
-	 * Save a specific user preference.
+	 * Save a specific user preference to the settings store.
+	 *
+	 * Since the user may do a lot of adjusting to the theme,
+	 * a timeout is set to allow for those adjustments,
+	 * and reduce the number of writes to the settings store.
+	 *
 	 * @param {string} key the accessor which is used to access the value of a setting.
-	 * @param {string | number | boolean} value the value to be used by the UI/APP.
+	 * @param {string | number | boolean} value the value to be used by the terminal
+	 * or overall application.
 	 * */
 	setItem(key: string, value: string | number | boolean) {
-		/* a time out is set here to allow the user some time to correct
-		any mistakes they may have made. */
-		setTimeout(async () => {
-			this.store.set(key, value)
-			await this.electronService.ipcRenderer.invoke(IPCChannelNames.RESET_WINDOW)
-		}, 1000)
+		this.store.set(key, value)
 	}
 
 	/**
-	 * Get the value of a given item.
+	 * Get the value of a given item and return it to the calling function.
 	 * @param {string} key the key which will "point" a specific item.
 	 * */
 	getItem(key: string): unknown {

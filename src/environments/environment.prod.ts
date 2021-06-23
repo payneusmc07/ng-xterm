@@ -1,4 +1,4 @@
-/** Define the Angular environment as "production" */
+/** Defines the Angular environment as "production" */
 export const environment = {
 	production: true
 }
