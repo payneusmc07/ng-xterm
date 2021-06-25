@@ -1,0 +1,1194 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerminalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/terminal/terminal.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/NodePtyService.html" target="_self" >NodePtyService</a></code>
+                                <code><a href="../injectables/SettingsService.html" target="_self" >SettingsService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ng-xterm-terminal</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>* {-webkit-app-region: no-drag;}</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;ng-xterm-top-bar [title]&#x3D;&quot;title&quot;&gt;
+	&lt;ng-xterm-snippets (taskName)&#x3D;&quot;writeSnippet($event)&quot;&gt;&lt;/ng-xterm-snippets&gt;
+&lt;/ng-xterm-top-bar&gt;
+&lt;ng-terminal #term
+             [id]&#x3D;&quot;terminalID&quot;
+             [dataSource]&#x3D;&quot;snippetsSubject&quot;
+             (focusin)&#x3D;&quot;handleFocus()&quot;
+             (focusout)&#x3D;&quot;handleBlur()&quot;&gt;
+&lt;/ng-terminal&gt;
+	</code></pre></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#child">child</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isActiveTerminal">isActiveTerminal</a>
+                            </li>
+                            <li>
+                                <a href="#ptyNumber">ptyNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ptyObject">ptyObject</a>
+                            </li>
+                            <li>
+                                <a href="#snippetsSubject">snippetsSubject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#terminalTitle">terminalTitle</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#handleBlur">handleBlur</a>
+                            </li>
+                            <li>
+                                <a href="#handleFocus">handleFocus</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#writeSnippet">writeSnippet</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#terminalID">terminalID</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(electronService: <a href="../injectables/ElectronService.html">ElectronService</a>, ptyService: <a href="../injectables/NodePtyService.html">NodePtyService</a>, settingsService: <a href="../injectables/SettingsService.html">SettingsService</a>, taskListService: <a href="../injectables/SnippetsService.html">SnippetsService</a>, addonsProviderService: <a href="../injectables/AddonsProviderService.html">AddonsProviderService</a>, themeProviderService: <a href="../injectables/ThemeProviderService.html">ThemeProviderService</a>, fileSystemService: <a href="../injectables/FileSystemService.html">FileSystemService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/terminal/terminal.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>electronService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ElectronService.html" target="_self" >ElectronService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ptyService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NodePtyService.html" target="_self" >NodePtyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>settingsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SettingsService.html" target="_self" >SettingsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>taskListService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SnippetsService.html" target="_self" >SnippetsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>addonsProviderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AddonsProviderService.html" target="_self" >AddonsProviderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>themeProviderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ThemeProviderService.html" target="_self" >ThemeProviderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileSystemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FileSystemService.html" target="_self" >FileSystemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalID"></a>
+                        <b>terminalID</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/terminal/terminal.component.ts:44</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Allow the terminal element to be assigned an id which is received from other components
+by providing a property which is externally bindable.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleBlur"></a>
+                    <span class="name">
+                        <b>
+                            handleBlur
+                        </b>
+                        <a href="#handleBlur"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleBlur()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/terminal/terminal.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>When the terminal is blurred, its text buffer WILL NOT be cleared
+when the terminal-clear ipc event is received</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleFocus"></a>
+                    <span class="name">
+                        <b>
+                            handleFocus
+                        </b>
+                        <a href="#handleFocus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleFocus()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/terminal/terminal.component.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>When the terminal is focused, its text buffer WILL be cleared
+when the terminal-clear ipc event is received</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/terminal/terminal.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">src/terminal/terminal.component.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Perform some &quot;cleanup work&quot; by disposing of the underlying terminal.
+and removing any active ipcRenderer listeners.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="writeSnippet"></a>
+                    <span class="name">
+                        <b>
+                            writeSnippet
+                        </b>
+                        <a href="#writeSnippet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>writeSnippet($event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">src/terminal/terminal.component.ts:184</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Receive or &quot;catch&quot; the snippet emitted from the task list component via</p>
+<div><pre class="line-numbers"><code class="language-none">     * task: Subject&lt;string&gt;
+     * this.task = new Subject&lt;string&gt;()
+     * ```
+Upon receiving the snippet, we need to use the underlying pty write
+to write the snippet to the terminal
+and execute the command (when the user hits enter).
+
+Do not use the terminal, aka</code></pre></div><div><pre class="line-numbers"><code class="language-none"> * this.child.underlying
+ * ```</code></pre></div><p>to write the snippet. If you do and the user hits enter,
+the command is not processed by node-pty, therefore
+the command is not executed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$event</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the emitted value received
+from the task list component.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="child"></a>
+                        <span class="name">
+                            <b>
+                            child</b>
+                            <a href="#child"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NgTerminal</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;term&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/terminal/terminal.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Allow access to the underlying HTML element, aka the underlying &quot;xterm&quot; </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isActiveTerminal"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isActiveTerminal</b>
+                            <a href="#isActiveTerminal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/terminal/terminal.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A boolean value to indicate if the terminal is focused or blurred </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ptyNumber"></a>
+                        <span class="name">
+                            <b>
+                            ptyNumber</b>
+                            <a href="#ptyNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/terminal/terminal.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A number value used to represent the current process id of a given pty process </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ptyObject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            ptyObject</b>
+                            <a href="#ptyObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IPty</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/terminal/terminal.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Represents an instance of the IPty interface which we will use to instantiate the node-pty service</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="snippetsSubject"></a>
+                        <span class="name">
+                            <b>
+                            snippetsSubject</b>
+                            <a href="#snippetsSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;string&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/terminal/terminal.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalTitle"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            terminalTitle</b>
+                            <a href="#terminalTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.settingsService.getItem(Settings.CUSTOM_TERM_TITLE) as string</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/terminal/terminal.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A string value used to receive the OSC 2 terminal title.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                            title</b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/terminal/terminal.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A string value used to hold the user defined OSC 2 terminal title. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+	AfterViewInit,
+	Component,
+	Input,
+	OnDestroy,
+	OnInit,
+	ViewChild
+} from &quot;@angular/core&quot;
+import { ElectronService, FileSystemService, SettingsService } from &quot;../shared/services&quot;
+import { Settings, IPCChannelNames, locations } from &quot;@shared/index&quot;
+import { AddonsProviderService, ThemeProviderService } from &quot;@terminal/services&quot;
+import { NodePtyService } from &quot;@terminal/services/node-pty.service&quot;
+import { NgTerminal } from &quot;ng-terminal&quot;
+import { IPty } from &quot;node-pty&quot;
+import { Subject } from &quot;rxjs&quot;
+import { SnippetsService } from &quot;@snippets/snippets.service&quot;
+
+@Component({
+	selector: &quot;ng-xterm-terminal&quot;,
+	template: &#x60;
+		&lt;ng-xterm-top-bar [title]&#x3D;&quot;title&quot;&gt;
+			&lt;ng-xterm-snippets (taskName)&#x3D;&quot;writeSnippet($event)&quot;&gt;&lt;/ng-xterm-snippets&gt;
+		&lt;/ng-xterm-top-bar&gt;
+		&lt;ng-terminal #term
+		             [id]&#x3D;&quot;terminalID&quot;
+		             [dataSource]&#x3D;&quot;snippetsSubject&quot;
+		             (focusin)&#x3D;&quot;handleFocus()&quot;
+		             (focusout)&#x3D;&quot;handleBlur()&quot;&gt;
+		&lt;/ng-terminal&gt;
+	&#x60;,
+	styles: [ &#x60;* {-webkit-app-region: no-drag;}&#x60; ],
+	providers: [ NodePtyService, SettingsService ]
+})
+
+export class TerminalComponent implements AfterViewInit, OnDestroy {
+
+	/** Allow access to the underlying HTML element, aka the underlying &quot;xterm&quot; */
+	@ViewChild(&quot;term&quot;, { static: false }) child: NgTerminal
+
+	/**
+	 * Allow the terminal element to be assigned an id which is received from other components
+	 * by providing a property which is externally bindable.
+	 * */
+	@Input() terminalID: number
+
+	/** Represents an instance of the IPty interface which we will use to instantiate the node-pty service*/
+	private ptyObject: IPty
+
+	/**
+	 * A string value used to receive the OSC 2 terminal title.
+	 * @see https://xtermjs.org/docs/api/vtfeatures/
+	 * */
+	private terminalTitle &#x3D; this.settingsService.getItem(Settings.CUSTOM_TERM_TITLE) as string
+
+	/** A boolean value to indicate if the terminal is focused or blurred */
+	private isActiveTerminal &#x3D; false
+
+	/** A string value used to hold the user defined OSC 2 terminal title. */
+	title: string
+
+	/** A number value used to represent the current process id of a given pty process */
+	ptyNumber: number
+
+	snippetsSubject: Subject&lt;string&gt; &#x3D; new Subject&lt;string&gt;()
+
+	constructor(private readonly electronService: ElectronService,
+	            private readonly ptyService: NodePtyService,
+	            private readonly settingsService: SettingsService,
+	            private readonly taskListService: SnippetsService,
+	            private readonly addonsProviderService: AddonsProviderService,
+	            private readonly themeProviderService: ThemeProviderService,
+	            private readonly fileSystemService: FileSystemService
+	) {
+
+		// instantiate the pty service so we can use it.
+		this.ptyObject &#x3D; this.ptyService.createFactoryObject()
+
+		// get the id number of the current pty session so it can be displayed in the topbar.
+		this.ptyNumber &#x3D; this.ptyObject?.pid
+	}
+
+	ngAfterViewInit() {
+		this.handleBlur()
+		this.handleFocus()
+
+		// load the user&#x27;s saved theme preferences using the theme provider service
+		this.themeProviderService.loadSavedThemeSettings(this.child.underlying)
+
+		this.themeProviderService.handleSubscriptions(this.child.underlying)
+
+		// use the addonsProviderService to load the terminal add ons.
+		this.addonsProviderService.loadAddons(this.child.underlying)
+
+		this.ptyService.handleDragAndDrop()
+
+		// this line required to allow for proper terminal resizing.
+		this.child.setStyle({ &quot;height&quot;: &quot;80vh&quot;})
+
+		try {
+			// utilize the node-pty service to configure communication
+			// between node-pty and the underlying terminal.
+			this.ptyService.initialize(this.child.underlying)
+
+			// set the OSC 2 title of the underlying terminal.
+			this.child.underlying.onTitleChange((value ) &#x3D;&gt; {
+				// if no user defined title exists, use the default process title
+				if(this.terminalTitle.length &#x3D;&#x3D; 0 || &quot;&quot;) {
+					this.title &#x3D; &#x60;pty ${this.ptyNumber}: ${value}&#x60;
+				}
+				else {
+					// if a custom title does exist, overwrite the default process title
+					this.title &#x3D; &#x60;pty ${this.ptyNumber}: ${this.terminalTitle}&#x60;
+				}
+			})
+
+			// listen for an ipc event to select the entirety of the terminal text area.
+			this.electronService.ipcRenderer.on(IPCChannelNames.SELECT_ALL, () &#x3D;&gt; this.child.underlying.selectAll())
+
+			// listen for an ipc event telling the task list service
+			// to save any text the user selected as a command snippet
+			this.electronService.ipcRenderer.on(IPCChannelNames.SAVE_SELECTION, () &#x3D;&gt; {
+				const selection &#x3D; this.child.underlying.getSelection()
+				this.taskListService.addTask(selection)
+			})
+
+			// listen for the ipc event to save the terminal buffer to an external file
+			this.electronService.ipcRenderer.on(IPCChannelNames.SAVE_SELECTION_TO_FILE, () &#x3D;&gt; {
+				const textBuffer &#x3D; this.child.underlying.getSelection()
+				this.fileSystemService.writeFile(locations.TERMINAL_OUTPUT_FILE, &#x60;${textBuffer}&#x60;)
+			})
+
+			// listen for the ipc event to clear the focused terminal
+			this.electronService.ipcRenderer.on(IPCChannelNames.CLEAR_TERMINAL, () &#x3D;&gt; {
+				if(this.isActiveTerminal) {
+					this.child.underlying.clear()
+				}
+			})
+
+		} catch {
+			// if something goes wrong, throw an error saying what happened.
+			this.ptyService?.destroyFactoryObject()
+		}
+	}
+
+	/**
+	 * When the terminal is blurred, its text buffer WILL NOT be cleared
+	 * when the terminal-clear ipc event is received
+	 * */
+	handleBlur() {
+		this.isActiveTerminal &#x3D; false
+		this.child.underlying.blur()
+	}
+
+	/**
+	 * When the terminal is focused, its text buffer WILL be cleared
+	 * when the terminal-clear ipc event is received
+	 * */
+	handleFocus() {
+		this.isActiveTerminal &#x3D; true
+		this.child.underlying.focus()
+	}
+
+	/**
+	 * Receive or &quot;catch&quot; the snippet emitted from the task list component via
+	 * &#x60;&#x60;&#x60;
+	 * task: Subject&lt;string&gt;
+	 * this.task &#x3D; new Subject&lt;string&gt;()
+	 * &#x60;&#x60;&#x60;
+	 * Upon receiving the snippet, we need to use the underlying pty write
+	 * to write the snippet to the terminal
+	 * and execute the command (when the user hits enter).
+	 *
+	 * Do not use the terminal, aka
+	 * &#x60;&#x60;&#x60;
+	 * this.child.underlying
+	 * &#x60;&#x60;&#x60;
+	 * to write the snippet. If you do and the user hits enter,
+	 * the command is not processed by node-pty, therefore
+	 * the command is not executed.
+	 *
+	 * @param {string} $event the emitted value received
+	 * from the task list component.
+	 * */
+	writeSnippet($event: string) {
+		this.ptyObject.write($event)
+	}
+
+	/**
+	 * Perform some &quot;cleanup work&quot; by disposing of the underlying terminal.
+	 * and removing any active ipcRenderer listeners.
+	 * */
+	ngOnDestroy() {
+		// destroy the underlying terminal.
+		this.child.underlying.dispose()
+
+		// remove all ipcRenderer event listeners.
+		this.electronService.ipcRenderer.removeAllListeners(IPCChannelNames.CLEAR_TERMINAL)
+		this.electronService.ipcRenderer.removeAllListeners(IPCChannelNames.SELECT_ALL)
+		this.electronService.ipcRenderer.removeAllListeners(IPCChannelNames.SAVE_SELECTION)
+	}
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">* {-webkit-app-region: no-drag;}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-xterm-top-bar [title]="title">	<ng-xterm-snippets (taskName)="writeSnippet($event)"></ng-xterm-snippets></ng-xterm-top-bar><ng-terminal #term             [id]="terminalID"             [dataSource]="snippetsSubject"             (focusin)="handleFocus()"             (focusout)="handleBlur()"></ng-terminal>	</div>'
+    var COMPONENTS = [{'name': 'AdvancedComponent', 'selector': 'ng-xterm-advanced-settings'},{'name': 'AppComponent', 'selector': 'ng-xterm-root'},{'name': 'AppTopbarComponent', 'selector': 'ng-xterm-app-topbar'},{'name': 'BackgroundSettingsComponent', 'selector': 'ng-xterm-background-settings'},{'name': 'CursorComponent', 'selector': 'ng-xterm-cursor-settings'},{'name': 'ForegroundComponent', 'selector': 'ng-xterm-foreground-settings'},{'name': 'GeneralSettingsComponent', 'selector': 'ng-xterm-terminal-settings'},{'name': 'MiscSettingsComponent', 'selector': 'ng-xterm-misc-settings'},{'name': 'SettingsComponent', 'selector': 'ng-xterm-settings'},{'name': 'SnippetsComponent', 'selector': 'ng-xterm-snippets'},{'name': 'SplitPanelComponent', 'selector': 'ng-xterm-split-panel'},{'name': 'TabsComponent', 'selector': 'ng-xterm-tabs'},{'name': 'TerminalComponent', 'selector': 'ng-xterm-terminal'},{'name': 'TopBarComponent', 'selector': 'ng-xterm-top-bar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TerminalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerminalComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

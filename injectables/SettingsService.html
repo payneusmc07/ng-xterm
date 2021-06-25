@@ -1,0 +1,778 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>SettingsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/shared/services/settings.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cursorBlinkSubject">cursorBlinkSubject</a>
+                            </li>
+                            <li>
+                                <a href="#cursorStyleSubject">cursorStyleSubject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#store">store</a>
+                            </li>
+                            <li>
+                                <a href="#terminalFontSizeSubject">terminalFontSizeSubject</a>
+                            </li>
+                            <li>
+                                <a href="#terminalLetterSpacingSubject">terminalLetterSpacingSubject</a>
+                            </li>
+                            <li>
+                                <a href="#terminalLineHeightSubject">terminalLineHeightSubject</a>
+                            </li>
+                            <li>
+                                <a href="#windowControlSubject">windowControlSubject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getItem">getItem</a>
+                            </li>
+                            <li>
+                                <a href="#setItem">setItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/shared/services/settings.service.ts:58</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getItem"></a>
+                    <span class="name">
+                        <b>
+                            getItem
+                        </b>
+                        <a href="#getItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getItem(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">src/shared/services/settings.service.ts:177</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the value of a given item and return it to the calling function.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the key which will &quot;point&quot; a specific item.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setItem"></a>
+                    <span class="name">
+                        <b>
+                            setItem
+                        </b>
+                        <a href="#setItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setItem(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: string | number | boolean)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/shared/services/settings.service.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Save a specific user preference to the settings store.</p>
+<p>Since the user may do a lot of adjusting to the theme,
+a timeout is set to allow for those adjustments,
+and reduce the number of writes to the settings store.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the accessor which is used to access the value of a setting.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>string | number | boolean</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the value to be used by the terminal
+or overall application.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cursorBlinkSubject"></a>
+                        <span class="name">
+                            <b>
+                            cursorBlinkSubject</b>
+                            <a href="#cursorBlinkSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(false)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/shared/services/settings.service.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cursorStyleSubject"></a>
+                        <span class="name">
+                            <b>
+                            cursorStyleSubject</b>
+                            <a href="#cursorStyleSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(&quot;block&quot;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/shared/services/settings.service.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="store"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            store</b>
+                            <a href="#store"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Store&lt;literal type&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/shared/services/settings.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Since Electron store returns an &quot;unknown&quot; type, to provide some
+level of type safety, we can use the default initialization
+scheme provided by ElectronStore,</p>
+<p><code>* ElectronStore&lt;{key: string, value: unknown}&gt;
+     *</code></p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalFontSizeSubject"></a>
+                        <span class="name">
+                            <b>
+                            terminalFontSizeSubject</b>
+                            <a href="#terminalFontSizeSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(13)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/shared/services/settings.service.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalLetterSpacingSubject"></a>
+                        <span class="name">
+                            <b>
+                            terminalLetterSpacingSubject</b>
+                            <a href="#terminalLetterSpacingSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(1)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/shared/services/settings.service.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalLineHeightSubject"></a>
+                        <span class="name">
+                            <b>
+                            terminalLineHeightSubject</b>
+                            <a href="#terminalLineHeightSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(1.2)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/shared/services/settings.service.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="windowControlSubject"></a>
+                        <span class="name">
+                            <b>
+                            windowControlSubject</b>
+                            <a href="#windowControlSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(&quot;mac&quot;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/shared/services/settings.service.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;
+import { BehaviorSubject } from &quot;rxjs&quot;
+import Store from &quot;electron-store&quot;
+
+@Injectable({ providedIn: &quot;root&quot; })
+
+/**
+ * A helper class to get or set the application wide settings.
+ * The store uses Subscriptions and Behavior subjects for settings
+ * related to the terminal theme. The benefit of this is each time a value
+ * in the store is changed, the new value will be applied to the
+ * terminal in real time through the terminal?.setOption() call.
+ *
+ * However this only applies to &quot;theme&quot; related settings
+ * (i.e. background, foreground, etc). Other settings such as the
+ * type of session, rows, and columns used by the underlying pty/terminal
+ * will require a window reload, as those cannot be properly
+ * updated in real time.
+ * */
+export class SettingsService {
+
+	/** Since Electron store returns an &quot;unknown&quot; type, to provide some
+	 * level of type safety, we can use the default initialization
+	 * scheme provided by ElectronStore,
+	 * &#x60;&#x60;&#x60;
+	 * ElectronStore&lt;{key: string, value: unknown}&gt;
+	 *&#x60;&#x60;&#x60;*/
+	private store: Store&lt;{
+		customTerminalTitle: unknown
+		darkMacTrafficLights: unknown
+		fontSize: unknown
+		linesOfTerminalScrollback: unknown
+		ptyRows: unknown
+		ptyCols: unknown
+		terminalCursorColor: unknown
+		terminalCursorStyle: unknown
+		terminalCursorAccentColor: unknown
+		terminalCursorBlink: unknown
+		shellType: unknown
+		terminalBackgroundTransparency: unknown
+		terminalBackgroundColor: unknown
+		terminalType: unknown
+		terminalFontSize: unknown
+		terminalLineHeight: unknown
+		terminalLetterSpacing: unknown
+		terminalSelectionColor: unknown
+		terminalForegroundColor: unknown
+		terminalFont: unknown
+		windowsStyleControls: unknown
+		windowControlStyle: unknown
+	}&gt;
+
+	terminalFontSizeSubject &#x3D;  new BehaviorSubject(13)
+	windowControlSubject &#x3D; new BehaviorSubject(&quot;mac&quot;)
+	cursorStyleSubject &#x3D; new BehaviorSubject(&quot;block&quot;)
+	cursorBlinkSubject &#x3D; new BehaviorSubject(false)
+	terminalLetterSpacingSubject &#x3D; new BehaviorSubject(1)
+	terminalLineHeightSubject &#x3D; new BehaviorSubject(1.2)
+
+	constructor() {
+		// configure the terminal settings store
+		this.store &#x3D; new Store({
+			name: &quot;terminal-settings&quot;,
+			watch: true,
+			schema: {
+				terminalBackgroundTransparency: {
+					type: &quot;number&quot;,
+					default: 0.90
+				},
+				terminalBackgroundColor: {
+					type: &quot;string&quot;,
+					default: &quot;#18242f&quot;
+				},
+				customTerminalTitle: {
+					type: &quot;string&quot;,
+					default: &quot;&quot;
+				},
+				darkMacTrafficLights: {
+					type: &quot;boolean&quot;,
+					default: false
+				},
+				fontSize: {
+					type: &quot;number&quot;,
+					default: 13
+				},
+				linesOfTerminalScrollback: {
+					type: &quot;number&quot;,
+					default: 100
+				},
+				ptyCols: {
+					type: &quot;number&quot;,
+					default: 80
+				},
+				ptyRows: {
+					type: &quot;number&quot;,
+					default: 25
+				},
+				terminalCursorAccentColor: {
+					type: &quot;string&quot;,
+					default: &quot;#47bedb&quot;
+				},
+				terminalCursorBlink: {
+					type: &quot;boolean&quot;,
+					default: false
+				},
+				terminalCursorColor: {
+					type: &quot;string&quot;,
+					default: &quot;#47bedb&quot;
+				},
+				terminalCursorStyle: {
+					type: &quot;string&quot;,
+					default: &quot;block&quot;
+				},
+				terminalFont: {
+					type: &quot;string&quot;,
+					default: &quot;Hack Nerd Font&quot;
+				},
+				terminalForegroundColor: {
+					type: &quot;string&quot;,
+					default: &quot;#dbf4fa&quot;
+				},
+				terminalFontSize: {
+					type: &quot;number&quot;,
+					default: 13,
+				},
+				terminalLetterSpacing: {
+					type: &quot;number&quot;,
+					default: 1
+				},
+				terminalType: {
+					type: &quot;string&quot;,
+					default: process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? null : &quot;xterm-256color&quot;
+				},
+				terminalLineHeight: {
+					type: &quot;number&quot;,
+					default: 1
+				},
+				terminalSelectionColor: {
+					type: &quot;string&quot;,
+					default: &quot;#47bedb&quot;
+				},
+				shellType: {
+					type: &quot;string&quot;,
+					default: process.platform &#x3D;&#x3D;&#x3D; &quot;win32&quot; ? &quot;powershell.exe&quot; : &quot;bash&quot;
+				},
+				windowsStyleControls: {
+					type: &quot;boolean&quot;,
+					default: false
+				},
+				windowControlStyle: {
+					type: &quot;string&quot;,
+					default: process.platform &#x3D;&#x3D;&#x3D; &quot;darwin&quot; ? &quot;mac&quot; : &quot;windows&quot;
+				}
+			}
+		})
+	}
+
+	/**
+	 * Save a specific user preference to the settings store.
+	 *
+	 * Since the user may do a lot of adjusting to the theme,
+	 * a timeout is set to allow for those adjustments,
+	 * and reduce the number of writes to the settings store.
+	 *
+	 * @param {string} key the accessor which is used to access the value of a setting.
+	 * @param {string | number | boolean} value the value to be used by the terminal
+	 * or overall application.
+	 * */
+	setItem(key: string, value: string | number | boolean) {
+		this.store.set(key, value)
+	}
+
+	/**
+	 * Get the value of a given item and return it to the calling function.
+	 * @param {string} key the key which will &quot;point&quot; a specific item.
+	 * */
+	getItem(key: string): unknown {
+		return this.store.get(key)
+	}
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SettingsService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
