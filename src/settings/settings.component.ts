@@ -3,37 +3,30 @@ import { Component } from "@angular/core"
 @Component({
 	selector: "ng-xterm-settings",
 	template:   `
-		<div class="mt-3 container-fluid">
-			<label class="form-label text-white offset-2 main-label mb-3">*All Changes Will Trigger A Window Reload*</label>
-			<div class="row row-cols-2">
-				<div class="col"><ng-xterm-shell-settings></ng-xterm-shell-settings></div>
-				<div class="col"><ng-xterm-font-finder></ng-xterm-font-finder></div>
-			</div>
-			<br>
-			<div class="row"><div class="col"><ng-xterm-foreground-settings></ng-xterm-foreground-settings></div>
-			</div>
-			<br>
-			<div class="row"><div class="col"><ng-xterm-cursor-settings></ng-xterm-cursor-settings></div></div>
-			<br>
-			<div class="row row-cols-3">
-				<div class="col"><ng-xterm-tab-settings></ng-xterm-tab-settings></div>
-				<div class="col"><ng-xterm-background-settings></ng-xterm-background-settings></div>
-				<div class="col"><ng-xterm-window-controls></ng-xterm-window-controls></div>
-			</div>
-			<br>
-			<div class="row"><div class="col"><ng-xterm-advanced-settings></ng-xterm-advanced-settings></div>
-			</div>
-		</div>
+		<ul class="nav text-nowrap
+		navbar-expand position-absolute top-0 start-50 translate-middle-x mt-2">
+			<li class="nav-item">
+				<a class="nav-link" >
+					<a routerLink="general" routerLinkActive="active">General</a>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link">
+					<a routerLink="advanced" routerLinkActive="active">Advanced</a>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link">
+					<a routerLink="misc" routerLinkActive="active">Misc</a>
+				</a>
+			</li>
+		</ul>
+		<router-outlet></router-outlet>
 	`,
 	styles: [`
-		* {
-			font-size: 12px !important;
-		}
-		.container-fluid {
-			-webkit-app-region: drag;
-			width: 100%;
-		}
-
+		* {font-size: 14px !important;}
+		.active { color: white }
+		a {color: grey}
 	` ],
 })
 
@@ -42,4 +35,4 @@ import { Component } from "@angular/core"
  * Splitting each major setting/setting group into its own form makes managing the settings
  * and forms much easier, and they are not all crammed into one gigantic form.
  * */
-export class SettingsComponent  {}
+export class SettingsComponent {}

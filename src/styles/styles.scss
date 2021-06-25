@@ -8,7 +8,6 @@
 @use "~bootstrap/scss/bootstrap";
 @import "_variables";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import "terminal-searchbar";
 
 @include noTextDecoration;
 @include makeButton;
@@ -24,63 +23,44 @@
 
 * {
 	text-rendering: optimizeLegibility;
-	//-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	overscroll-behavior: contain;
 	color-rendering: optimizeQuality;
-	color-interpolation: sRGB;;
-	font-feature-settings: "dlig", "liga", "calt";
+	color-interpolation: sRGB;
+	font-feature-settings: "dlig", "liga", "calt" 1;
 	font-feature-settings:"kern" 1;
-}
-
-
-body, html {
-	height: 100%;
-}
-
-.drag {
-	@include allowDrag;
-}
-
-.noDrag {
-	@include noDrag;
-}
-
-input, button {
-	@include noDrag;
-}
-
-.form-control:focus {
-	@include noFocusRing;
-}
-
-textarea {
-	resize: none;
-}
-
-* {
 	text-decoration: none !important;
+	@include noTextDecoration;
 }
 
+.drag { @include allowDrag;}
+
+.noDrag { @include noDrag; }
+
+input, button, .form-control,.form-label, .form-control-sm { @include noDrag;}
 
 // disable the xterm scroll bar
-::-webkit-scrollbar {
-	display: none;
+::-webkit-scrollbar { display: none; }
+
+select {
+	@include makeSelect;
+	&:focus {
+		@include noFocusRing;
+	}
 }
 
-.form-check-input {
+.form-check-input, .form-control, .form-control-sm {
 	border-color: transparent;
 	&:focus, &:checked {
 		@include noFocusRing;
 	}
 }
 
-
 .form-label {
 	color: white !important;
+	font-size: 12px !important;
 }
 
-select {
-	@include makeSelect;
-}
 
 

@@ -1,7 +1,7 @@
 <div class="d-flex">
 	<ul ngbNav #nav="ngbNav"
 	    [(activeId)]="active"
-	    class="nav-pills drag border-0"
+	    class="nav-pills drag border-0 position-relative"
 	    orientation="vertical"
 	    [destroyOnHide]="false"
 	    keyboard="changeWithArrows"
@@ -14,29 +14,28 @@
 		>
 			<a ngbNavLink
 			   [id]="i"
-			   [ngStyle]="{'background-color': tabBackgroundColor, 'color': tabFontColor}"
-			   class="noDrag mt-1 mb-3 custom-tab"
+			   class="noDrag mb-3 custom-tab bg-transparent"
 			   (click)="emitTabID(i)"
 			   (dblclick)="removeTab(i)"
+			   [sortablejs]="i"
 			>
 				{{ i }}
 			</a>
 			<ng-template ngbNavContent>
-				<ng-xterm-split-panel [tabID]="i" [id]="tabToRemove" ></ng-xterm-split-panel>
+				<ng-xterm-split-panel [tabID]="i" [id]="tabToRemove"></ng-xterm-split-panel>
 			</ng-template>
 		</li>
 
 		<li ngbNavItem>
 			<a ngbNavLink
 			   (click)="emitTabID('-')"
-			   class="noDrag bg-transparent border-0">
-				<i class="bi bi-gear-fill text-white"></i>
+			   class="noDrag border-0 custom-tab bg-transparent">
+				<i class="bi bi-gear-fill"></i>
 			</a>
 			<ng-template ngbNavContent>
 				<ng-xterm-settings></ng-xterm-settings>
 			</ng-template>
 		</li>
-
 	</ul>
 	<div [ngbNavOutlet]="nav" class="container-fluid"></div>
 </div>

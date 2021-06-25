@@ -1,0 +1,27 @@
+<div class="form-group container-fluid" [formGroup]="miscSettingsForm">
+
+	<div class="row row-cols-2 mt-3 justify-content-center">
+
+		<!-- install or remove fonts -->
+		<div class="col">
+			<label class="form-label text-white">{{ installFontsButtonLabel }} PowerLine Fonts</label>
+			<button class="btn btn-sm" (click)="handleFontInstallationOrRemoval()">
+				<i class="bi bi-pencil-fill"></i>
+			</button>
+		</div>
+
+		<!-- auto update -->
+		<div class="col">
+			<div class="form-check">
+				<input class="form-check-input"
+				       formControlName="auto-update"
+				       type="checkbox"
+				       [value]="autoUpdateEnabled"
+				       (change)="setAutoUpdate(miscSettingsForm.get('auto-update').value)"
+				>
+				<label class="form-label text-white">Auto Update</label>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core"
-import { Tab } from "@shared/models/tab.model"
+import { Tab } from "@shared/utils"
 import { Observable, of } from "rxjs"
 import { SplitPanelComponent } from "./tab/split-panel.component"
 

@@ -1,0 +1,55 @@
+<div class="form-group" [formGroup]="cursorSettingsForm">
+	<div class="row row-cols-4 justify-content-evenly">
+
+		<!-- cursor color -->
+		<div class="col">
+			<label class="form-label text-white">*Cursor Color</label>
+			<input (change)="setCursorColor(cursorSettingsForm.get('main-color').value)"
+			       [value]="cursorColor"
+			       formControlName="main-color"
+			       type="color"
+			       class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+
+		<!-- cursor accent -->
+		<div class="col">
+			<label class="form-label text-white">*Cursor Accent</label>
+			<input (change)="setCursorAccentColor(cursorSettingsForm.get('accent-color').value)"
+			       [value]="cursorAccentColor"
+			       formControlName="accent-color"
+			       type="color"
+			       class="form-control form-control-color bg-transparent border-0"
+			/>
+		</div>
+
+		<!-- cursor style -->
+		<div class="col">
+			<label class="form-label text-white style-label">Cursor Style</label>
+			<select class="form-control bg-dark border-secondary form-control-sm text-white h-50 style-select"
+			       (change)="setCursorStyle(cursorSettingsForm.get('style').value)"
+			        formControlName="style"
+			        [value]="cursorStyles"
+			>
+				<option *ngFor="let style of cursorStyles"
+				        [ngValue]="style"
+				>{{ style }}</option>
+			</select>
+		</div>
+
+		<!-- cursor blink -->
+		<div class="col mt-3">
+			<div class="form-check">
+				<input class="form-check-input"
+				       formControlName="should-blink"
+				       type="checkbox"
+				       [value]="cursorBlink"
+				       (change)="setCursorBlink(cursorSettingsForm.get('should-blink').value)"
+				>
+				<label class="form-label text-white">Cursor Blink</label>
+			</div>
+		</div>
+
+	</div>
+</div>
+

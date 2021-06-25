@@ -2,7 +2,7 @@ import { Injectable, OnDestroy } from "@angular/core"
 import { IPty } from "node-pty"
 import * as pty from "node-pty"
 import { SettingsService } from "@shared/services"
-import { AppSettings } from "@shared/utils"
+import { Settings } from "@shared/utils"
 import { Terminal } from "xterm"
 
 /** Provide node-pty as a service */
@@ -11,7 +11,7 @@ import { Terminal } from "xterm"
 export class NodePtyService implements OnDestroy {
 
 	/** A type context to refer to the type of a pty from the node-pty module   */
-	private pty: typeof pty
+	private readonly pty: typeof pty
 
 	/** An interface representing a pseudoterminal, on Windows this is emulated via the winpty library. */
 	private ptyProcess: IPty
@@ -30,24 +30,27 @@ export class NodePtyService implements OnDestroy {
 	}
 
 	/**
-	 * Configure the pty instance.
-	 * @returns {IPty} an instance of node-pty.
+	 * Configure the pty service instance.
+	 * @returns IPty an instance of the node-pty module.
 	 * */
 	createFactoryObject(): IPty {
 		try {
-			this.ptyProcess = this.pty.spawn(this.settingsService.getItem(AppSettings.TERM_SHELL_TYPE) as string, [], {
+			//const isWindows = operatingSystems.IS_WINDOWS ? "powershell.exe" : this.settingsService.getItem(AppSettings.TERM_SHELL_TYPE) as string
+			this.ptyProcess = this.pty.spawn(this.settingsService.getItem(Settings.SHELL_TYPE) as string, ["--login"], {
 
-				// get the type of terminal session the user wishes to use from the settings store.
-				name: this.settingsService.getItem(AppSettings.TERM_TYPE) as string,
+				// get the type of terminal session from the settings store.
+				name: this.settingsService.getItem(Settings.TERM_TYPE) as string,
 
 				// set the working directory for the pty process
 				cwd: process.env.HOME,
 
 				// get the number of rows the pty should be from the settings store.
-				rows: +this.settingsService.getItem(AppSettings.PTY_ROWS),
+				rows: +this.settingsService.getItem(Settings.PTY_ROWS),
 
-				// get the number of columnsthe pty should be from the settings store.
-				cols: +this.settingsService.getItem(AppSettings.PTY_COLS),
+				// get the number of columns the pty should be from the settings store.
+				cols: +this.settingsService.getItem(Settings.PTY_COLS),
+
+				env: process.env,
 
 				// allow the pty to handle control flow
 				handleFlowControl: true,
@@ -88,12 +91,13 @@ export class NodePtyService implements OnDestroy {
 	/**
 	 * When a file or files are dropped on the terminal,
 	 * we loop through the file(s) which were dropped, and use the
-	 * underlying pty to write their values. By using the pty to write the file
-	 * instead of the terminal, we can then perform "standard" terminal actions on the file,
-	 * such as "cat", "ls", etc.
+	 * underlying pty to write their values. By using the pty
+	 * instead of the terminal, we can then perform standard
+	 * terminal actions on the file, such as "cat", "ls", etc.
 	 *
-	 * If the terminal is used rather than the pty, when the user hits enter no commands
-	 * can be applied to the file path as the terminal relies on the underlying pty for command
+	 * If the terminal is used rather than the pty, when the user
+	 * hits enter, no commands can be applied to the file path
+	 * as the terminal relies on the underlying pty for command
 	 * execution.
 	 *
 	 *@todo figure out a way to prevent the dropped files from being displayed on ALL terminals.
@@ -143,7 +147,6 @@ export class NodePtyService implements OnDestroy {
 		terminal?.onData((data) => this.ptyProcess?.write(`${ data }`))
 
 		// handle resize events.
-
 		terminal.onResize((data) => {
 			this.ptyProcess?.resize(
 				Math.max(data ? data.cols : terminal.cols, 1),

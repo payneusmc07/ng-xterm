@@ -19,8 +19,8 @@ export class FileSystemService {
 	 * @see ./typings.d.ts
 	 * */
 	constructor() {
-			this.fsExtra = window.require("fs-extra")
-			this.readline = window.require("readline")
+		this.fsExtra = window.require("fs-extra")
+		this.readline = window.require("readline")
 	}
 
 	/**
@@ -29,8 +29,8 @@ export class FileSystemService {
 	 * @param {string} dataToAppend the data being appended to the file.
 	 * */
 	appendToFile(filePath: string, dataToAppend: string) {
-		this.fsExtra.writeFile(filePath, `\n${dataToAppend}`,
-			{ encoding: "utf8", flag: "a"},(error) => console.warn(error))
+		this.fsExtra.writeFile(filePath, `\n${ dataToAppend }`,
+			{ encoding: "utf8", flag: "a" }, (error) => console.warn(error))
 	}
 
 	/**
@@ -38,11 +38,28 @@ export class FileSystemService {
 	 * @param {string} filePath the path to the file which is being modified.
 	 * @param {string} dataToAppend the data being appended to the file.
 	 * */
-	writeFile(filePath: string, dataToAppend: string){
-		this.fsExtra.writeFile(filePath, `${dataToAppend}`,
-			{ encoding: "utf8"},(error) => console.warn(error))
+
+	writeFile(filePath: string, dataToAppend: string) {
+		const newFile = this.fsExtra.createWriteStream(filePath, {flags: "w+"})
+		newFile.write(`${dataToAppend}`, (error) => console.log(error))
 	}
 
+	openAndWrite(filePath: string, dataToAppend: string) {
+		this.fsExtra.open(filePath, "w+", ((err, fd) => {
+			if(err) {
+				alert(err.message)
+				return
+			}
+			this.fsExtra.writeFile(filePath, dataToAppend)
+				.catch((reason) => alert(reason))
+			this.fsExtra.close(fd, (error) => {
+				if(error) {
+					alert(error)
+				}
+			})
+		}))
+
+	}
 	/**
 	 * Read and return the contents of a directory
 	 * @param {string} directoryPath the path to the directory which will be read.
@@ -50,5 +67,34 @@ export class FileSystemService {
 	 * */
 	readDirectory(directoryPath: string): Promise<string[]> {
 		return this.fsExtra.readdir(directoryPath)
+	}
+
+	async readFile(fileToRead: string): Promise<string> {
+		return new Promise((resolve, reject) => {
+			let data = ""
+			let errorMessage = ""
+			const buffer = this.fsExtra.createReadStream(fileToRead)
+
+			buffer.on("data", (chunk) => data += chunk)
+			buffer.on("error", (error) => errorMessage += error)
+			buffer.on("close", () => (data ? resolve(data) : reject(errorMessage)))
+		})
+
+	}
+
+	copyFile(fromPath: string, toPath: string) {
+		if(this.checkIfPathExists(toPath)) {
+			console.log(`${toPath} exists`)
+		}
+		else {
+			this.fsExtra.copy(fromPath, toPath)
+				.then(() => console.log(`copied ${ fromPath } to ${ toPath }`))
+				.catch((error) => alert(error))
+		}
+	}
+
+
+	checkIfPathExists(pathToCheck: string): boolean {
+		return this.fsExtra.existsSync(pathToCheck)
 	}
 }

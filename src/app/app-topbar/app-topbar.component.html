@@ -1,9 +1,9 @@
-<nav class="navbar navigation-clean">
+<nav class="navbar navigation-clean ">
 	<div class="container-fluid">
 		<a [class.hidden]="windowsStyleControls"
 		   [class.mac-dark]="darkMacControls"
 
-		   class="navbar-brand bg-dark border rounded mac-standard border-secondary text-nowrap">
+		   class="navbar-brand bg-dark border rounded mac-standard border-secondary text-nowrap position-fixed top-0 start-0">
 
 			<i class="bi bi-circle-fill" id="btn-close-mac" (click)="closeWindow()"></i>
 
@@ -17,7 +17,7 @@
 		</a>
 
 		<a *ngIf="windowsStyleControls"
-		   class="navbar-brand bg-dark border rounded windows-style border-secondary text-nowrap">
+		   class="navbar-brand bg-dark border rounded windows-style border-secondary text-nowrap position-absolute top-0 end-0">
 			<i class="bi bi-terminal-fill term-icon">
 				{{ tabID }}
 			</i>
@@ -29,11 +29,22 @@
 			<i class="bi bi-x-lg" id="btn-close-win" (click)="closeWindow()"></i>
 		</a>
 	</div>
+
+	<div>
+
+	</div>
 	<a
 		[class.hidden]="windowsStyleControls"
 		(click)="addTab()"
 		id="add-tab"
-		class="navbar-brand border rounded border-secondary add-tab-mac text-center">
+		class="navbar-brand
+		border
+		rounded
+		border-secondary
+		add-tab-mac
+		text-center
+		position-fixed
+		top-0 end-0">
 		<i class="bi bi-plus-lg text-white"></i>
 	</a>
 </nav>

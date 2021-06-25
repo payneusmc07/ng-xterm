@@ -1,45 +1,44 @@
 import { NgModule } from "@angular/core"
 import { CommonModule } from "@angular/common"
-import { NgbTooltipModule } from "@ng-bootstrap/ng-bootstrap"
-import { WindowControlsComponent} from "./window-controls/window-controls.component"
+import { RouterModule } from "@angular/router"
+import { SettingsRoutingModule } from "@settings/settings-routing.module"
 import { SettingsService } from "@shared/services"
-import { SettingsComponent } from "./settings.component"
+import { SettingsComponent } from "@settings/settings.component"
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
-import { TabSettingsComponent } from "./tabs/tab-settings.component"
-import { ShellComponent } from "./terminal/shell/shell.component"
-import { ForegroundComponent } from "./terminal/foreground/foreground.component"
-import { CursorComponent } from "./terminal/foreground/cursor/cursor.component"
-import { FontComponent } from "./terminal/foreground/font/font.component"
-import { BackgroundComponent } from "./terminal/background/background.component"
-import { AdvancedComponent } from './terminal/advanced/advanced.component'
+import { ForegroundComponent } from "@settings/general/foreground/foreground.component"
+import { CursorComponent } from "@settings/general/foreground/cursor/cursor.component"
+import { BackgroundSettingsComponent } from "@settings/general/background/background-settings.component"
+import { AdvancedComponent } from "@settings/advanced/advanced.component"
+import { GeneralSettingsComponent } from "@settings/general/general-settings.component"
+import { MiscSettingsComponent } from "@settings/misc/misc-settings.component"
 
 
 @NgModule({
 	declarations: [
 		SettingsComponent,
 		ForegroundComponent,
-		BackgroundComponent,
-		TabSettingsComponent,
-		ShellComponent,
+		BackgroundSettingsComponent,
 		CursorComponent,
-		FontComponent,
-		WindowControlsComponent,
-        AdvancedComponent
+		AdvancedComponent,
+		GeneralSettingsComponent,
+		MiscSettingsComponent
 	],
 	exports: [
 		SettingsComponent,
-		TabSettingsComponent,
-		BackgroundComponent,
-		ShellComponent,
-		AdvancedComponent
+		BackgroundSettingsComponent,
+		AdvancedComponent,
+		GeneralSettingsComponent,
+		MiscSettingsComponent
 	],
 	imports: [
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
-		NgbTooltipModule
+		SettingsRoutingModule,
+		RouterModule.forRoot([])
 	],
 	providers: [ SettingsService ]
 })
 
-export class SettingsModule {}
+export class SettingsModule {
+}
