@@ -1,0 +1,768 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>AppHelper</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>main-lib/app-helper.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The AppHelper class was designed to
+act as a &quot;Swiss Army knife&quot; for NG-Xterm, meaning it does a little bit of
+everything. All though some may have argued for breaking  into smaller
+utility classes, I find it easier to have everything in one place.
+This prevents having to chase down various imports when examining or
+refactoring the source code.</p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkForUpdates">checkForUpdates</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createAppDirectories">createAppDirectories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createSnippetsFile">createSnippetsFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#doesPathExist">doesPathExist</a>
+                            </li>
+                            <li>
+                                <a href="#registerShortcuts">registerShortcuts</a>
+                            </li>
+                            <li>
+                                <a href="#setConfigurationOptions">setConfigurationOptions</a>
+                            </li>
+                            <li>
+                                <a href="#unRegisterShortCuts">unRegisterShortCuts</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">main-lib/app-helper.ts:15</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkForUpdates"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            checkForUpdates
+                        </b>
+                        <a href="#checkForUpdates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkForUpdates()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">main-lib/app-helper.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Automatically check for and download new application updates.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a promise containing the result of the update check</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createAppDirectories"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createAppDirectories
+                        </b>
+                        <a href="#createAppDirectories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createAppDirectories()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">main-lib/app-helper.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create the configuration directory for NG-Xterm.</p>
+<p>This is were we can store addons,
+configurations file, fonts, etc.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createSnippetsFile"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createSnippetsFile
+                        </b>
+                        <a href="#createSnippetsFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createSnippetsFile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">main-lib/app-helper.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create the snippets file which will store all user defined snippets.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doesPathExist"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            doesPathExist
+                        </b>
+                        <a href="#doesPathExist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>doesPathExist(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">main-lib/app-helper.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if a file/directory path exists.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>path</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the file path in question.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a boolean stating if the path exists or not.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerShortcuts"></a>
+                    <span class="name">
+                        <b>
+                            registerShortcuts
+                        </b>
+                        <a href="#registerShortcuts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerShortcuts(browserWindow: BrowserWindow)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">main-lib/app-helper.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Register global shortcuts to hide and show the application window.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>browserWindow</td>
+                                    <td>
+                                            <code>BrowserWindow</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the browser window instance which the shortcuts will be registered to.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setConfigurationOptions"></a>
+                    <span class="name">
+                        <b>
+                            setConfigurationOptions
+                        </b>
+                        <a href="#setConfigurationOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setConfigurationOptions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">main-lib/app-helper.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>1: Disable renderer process reuse. This is required since node-pty
+is a &quot;non context aware module&quot;</p>
+<p>2: Append various commandline flags to force Chrome to use GPU rending.</p>
+<p>3: Initialize Electron Store for use in the main and renderer process</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unRegisterShortCuts"></a>
+                    <span class="name">
+                        <b>
+                            unRegisterShortCuts
+                        </b>
+                        <a href="#unRegisterShortCuts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>unRegisterShortCuts()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">main-lib/app-helper.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Unregister all global shortcuts when the app emits the &quot;will-quit&quot; event</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { app, BrowserWindow, globalShortcut } from &quot;electron&quot;
+import { mkdirp, existsSync, writeFile } from &quot;fs-extra&quot;
+import { autoUpdater } from &quot;electron-updater&quot;
+import Store from &quot;electron-store&quot;
+import { locations, GlobalShortcuts } from &quot;@shared/utils&quot;
+
+/**
+ * The AppHelper class was designed to
+ * act as a &quot;Swiss Army knife&quot; for NG-Xterm, meaning it does a little bit of
+ * everything. All though some may have argued for breaking  into smaller
+ * utility classes, I find it easier to have everything in one place.
+ * This prevents having to chase down various imports when examining or
+ * refactoring the source code.
+ * */
+export class AppHelper {
+
+	constructor() {
+		this.setConfigurationOptions()
+		this.createAppDirectories()
+		this.createSnippetsFile()
+	}
+
+	/**
+	 * Automatically check for and download new application updates.
+	 * @returns a promise containing the result of the update check
+	 * */
+	async checkForUpdates(): Promise&lt;void&gt; {
+		await autoUpdater.checkForUpdatesAndNotify({
+			title: &quot;New Update Available&quot;,
+			body: &#x60; A new update is available for ${ app.name }&#x60;
+		})
+		autoUpdater.autoInstallOnAppQuit &#x3D; true
+	}
+
+	/**
+	 * Create the configuration directory for NG-Xterm.
+	 *
+	 * This is were we can store addons,
+	 * configurations file, fonts, etc.
+	 * */
+	private createAppDirectories() {
+		// Check if either the configuration directory exist, and create it if it does not exist.
+		if(!locations.CONFIG_DIRECTORY) {
+			// if it does not exist, create it.
+			mkdirp(locations.CONFIG_DIRECTORY, (error) &#x3D;&gt; console.log(error))
+			console.log(&quot;Created application directory at:&quot;, locations.CONFIG_DIRECTORY)
+		}
+		// Check if the scripts directory exist
+		if(!locations.SCRIPTS_DIRECTORY)  {
+			// if it does not exist, create it.
+			mkdirp(locations.SCRIPTS_DIRECTORY, (error) &#x3D;&gt; console.log(error))
+			console.log(&quot;Created scripts directory at: &quot;, locations.SCRIPTS_DIRECTORY)
+		}
+		// Check if the plugins directory exist
+		if(!locations.PLUGINS_DIRECTORY)  {
+			// if it does not exist, create it.
+			mkdirp(locations.PLUGINS_DIRECTORY, (error) &#x3D;&gt; console.log(error))
+			console.log(&quot;Created scripts directory at: &quot;,locations.PLUGINS_DIRECTORY)
+		}
+	}
+
+	/**
+	 * Create the snippets file which will store all user defined snippets.
+	 * */
+	private createSnippetsFile() {
+		// check if the snippets file already  exists
+		if(!this.doesPathExist(locations.SNIPPETS_FILE)) {
+			// if not, create a blank file to hold the snippets
+			writeFile(locations.SNIPPETS_FILE, &quot;&quot;, (error) &#x3D;&gt; console.log(error))
+		} else {
+			console.log(&quot;The snippets file already exists.&quot;)
+		}
+	}
+
+	/**
+	 * Check if a file/directory path exists.
+	 *
+	 * @param {string} path the file path in question.
+	 * @returns a boolean stating if the path exists or not.
+	 * */
+	private doesPathExist(path: string): boolean {
+		return existsSync(path)
+	}
+
+	/**
+	 * Register global shortcuts to hide and show the application window.
+	 * @param {BrowserWindow} browserWindow the browser window instance which the shortcuts will be registered to.
+	 * */
+	registerShortcuts(browserWindow: BrowserWindow) {
+		const windowWillShow &#x3D; globalShortcut.register(GlobalShortcuts.SHOW_WINDOW, () &#x3D;&gt; {
+			if(process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &quot;development&quot;) {
+				windowWillShow
+					? console.log(&quot;Registered windowWillShow event handler&quot;)
+					: console.log(&quot;Could not register windowWillShow event handler&quot;)
+			}
+			browserWindow?.show()
+		})
+
+		const windowWillHide &#x3D; globalShortcut.register(GlobalShortcuts.HIDE_WINDOW, () &#x3D;&gt; {
+			if(process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &quot;development&quot;) {
+				windowWillHide
+					? console.log(&quot;Registered windowWillHide event handler&quot;)
+					: console.log(&quot;Could not register windowWillHide event handler&quot;)
+			}
+			browserWindow?.hide()
+		})
+	}
+
+	/**
+	 * Unregister all global shortcuts when the app emits the &quot;will-quit&quot; event
+	 * */
+	unRegisterShortCuts() {
+		globalShortcut.unregisterAll()
+	}
+
+	/**
+	 * 1: Disable renderer process reuse. This is required since node-pty
+	 * is a &quot;non context aware module&quot;
+	 *
+	 * 2: Append various commandline flags to force Chrome to use GPU rending.
+	 *
+	 * 3: Initialize Electron Store for use in the main and renderer process
+	 * @exception app.allowRendererProcessReuse is required for node-pty
+	 * to function correctly. Do not remove this flag or you will see an error
+	 * which resembles &quot;cannot find ../Debug/node-pty.node&quot; in the developer tools.
+	 * */
+	setConfigurationOptions() {
+		// 1: this is required for node-pty to work properly
+		app.allowRendererProcessReuse &#x3D; false
+
+		// 2: GPU related commandLine flags
+		/** Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations */
+		app.commandLine.appendSwitch(&quot;--ignore-gpu-blocklist&quot;)
+
+		/** Use the GPU to rasterize web content. */
+		app.commandLine.appendSwitch(&quot;--enable-gpu-rasterization&quot;)
+
+		/** Force use of the discrete GPU (if one exists) */
+		app.commandLine.appendSwitch(&quot;--force_high_power_gpu&quot;)
+
+		/** Raster threads write directly to GPU memory associated with tiles */
+		app.commandLine.appendSwitch(&quot;--enable-zero-copy&quot;)
+
+		/** Use Skia as the graphics API instead of OpenGL */
+		app.commandLine.appendSwitch(&quot;--enable-skia-renderer&quot;)
+
+		/** Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering.  */
+		app.commandLine.appendSwitch(&quot;--disable-accelerated-2d-canvas&quot;)
+
+		/** Forces Chrome to use a specific color profile instead of the color
+		 * of the window&#x27;s current monitor, as specified by the operating system
+		 * */
+		app.commandLine.appendSwitch(&quot;--force-color-profile&quot;, &quot;srgb&quot;)
+
+		// 3: Initialize Electron Store for use in the main and renderer process
+		Store.initRenderer()
+	}
+
+}
+
+
+
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppHelper.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

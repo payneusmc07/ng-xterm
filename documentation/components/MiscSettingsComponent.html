@@ -1,0 +1,906 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-xterm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-xterm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MiscSettingsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/settings/misc/misc-settings.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ng-xterm-misc-settings</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./misc-settings.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#doesFontsDirectoryExist">doesFontsDirectoryExist</a>
+                            </li>
+                            <li>
+                                <a href="#fishInstallStatusLabel">fishInstallStatusLabel</a>
+                            </li>
+                            <li>
+                                <a href="#installFontsButtonLabel">installFontsButtonLabel</a>
+                            </li>
+                            <li>
+                                <a href="#miscSettingsForm">miscSettingsForm</a>
+                            </li>
+                            <li>
+                                <a href="#powershellInstallStatusLabel">powershellInstallStatusLabel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleFontInstallationOrRemoval">handleFontInstallationOrRemoval</a>
+                            </li>
+                            <li>
+                                <a href="#installFishTerminal">installFishTerminal</a>
+                            </li>
+                            <li>
+                                <a href="#installPowerShell">installPowerShell</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setAutoUpdate">setAutoUpdate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(settingsService: <a href="../injectables/SettingsService.html">SettingsService</a>, commandRunnerService: <a href="../injectables/CommandRunnerService.html">CommandRunnerService</a>, fileSystemService: <a href="../injectables/FileSystemService.html">FileSystemService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/settings/misc/misc-settings.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>settingsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SettingsService.html" target="_self" >SettingsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commandRunnerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommandRunnerService.html" target="_self" >CommandRunnerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileSystemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FileSystemService.html" target="_self" >FileSystemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleFontInstallationOrRemoval"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            handleFontInstallationOrRemoval
+                        </b>
+                        <a href="#handleFontInstallationOrRemoval"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleFontInstallationOrRemoval()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/settings/misc/misc-settings.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Install or remove the Powerline font collection based
+on if they are already installed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="installFishTerminal"></a>
+                    <span class="name">
+                        <b>
+                            installFishTerminal
+                        </b>
+                        <a href="#installFishTerminal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>installFishTerminal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/settings/misc/misc-settings.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="installPowerShell"></a>
+                    <span class="name">
+                        <b>
+                            installPowerShell
+                        </b>
+                        <a href="#installPowerShell"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>installPowerShell()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/settings/misc/misc-settings.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/settings/misc/misc-settings.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setAutoUpdate"></a>
+                    <span class="name">
+                        <b>
+                            setAutoUpdate
+                        </b>
+                        <a href="#setAutoUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setAutoUpdate(shouldAutoUpdate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/settings/misc/misc-settings.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>shouldAutoUpdate</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>if new updates should be automatically
+downloaded and installed.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doesFontsDirectoryExist"></a>
+                        <span class="name">
+                            <b>
+                            doesFontsDirectoryExist</b>
+                            <a href="#doesFontsDirectoryExist"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.fileSystemService.checkIfPathExists(locations.FONTS_DIRECTORY)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/settings/misc/misc-settings.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Does the fonts directory exist?  </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fishInstallStatusLabel"></a>
+                        <span class="name">
+                            <b>
+                            fishInstallStatusLabel</b>
+                            <a href="#fishInstallStatusLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/settings/misc/misc-settings.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="installFontsButtonLabel"></a>
+                        <span class="name">
+                            <b>
+                            installFontsButtonLabel</b>
+                            <a href="#installFontsButtonLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/settings/misc/misc-settings.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="miscSettingsForm"></a>
+                        <span class="name">
+                            <b>
+                            miscSettingsForm</b>
+                            <a href="#miscSettingsForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/settings/misc/misc-settings.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Type context referring to the type FormGroup. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="powershellInstallStatusLabel"></a>
+                        <span class="name">
+                            <b>
+                            powershellInstallStatusLabel</b>
+                            <a href="#powershellInstallStatusLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/settings/misc/misc-settings.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;
+import { FormControl, FormGroup } from &quot;@angular/forms&quot;
+import { CommandRunnerService, FileSystemService, SettingsService } from &quot;@shared/services&quot;
+import { locations } from &quot;@shared/utils&quot;
+
+@Component({
+	selector: &quot;ng-xterm-misc-settings&quot;,
+	templateUrl: &quot;./misc-settings.component.html&quot;
+})
+
+export class MiscSettingsComponent implements OnInit {
+	/** Type context referring to the type FormGroup. */
+	miscSettingsForm: FormGroup
+
+
+	powershellInstallStatusLabel: string
+
+	fishInstallStatusLabel: string
+
+	installFontsButtonLabel: string
+
+	/** Does the fonts directory exist?  */
+	doesFontsDirectoryExist &#x3D; this.fileSystemService.checkIfPathExists(locations.FONTS_DIRECTORY)
+
+	constructor(
+		private readonly settingsService: SettingsService,
+		private readonly commandRunnerService: CommandRunnerService,
+		private readonly fileSystemService: FileSystemService
+	) {
+	}
+
+	ngOnInit() {
+		// set the install fonts button text based on if the powerline
+		// fonts collection is installed or not.
+		!this.doesFontsDirectoryExist
+			? this.installFontsButtonLabel &#x3D; &quot;Install&quot;
+			: this.installFontsButtonLabel &#x3D; &quot;Uninstall&quot;
+
+		this.powershellInstallStatusLabel &#x3D; &quot;Install Powershell&quot;
+		this.fishInstallStatusLabel &#x3D; &quot;Install Fish&quot;
+
+		this.miscSettingsForm &#x3D; new FormGroup({
+			&quot;auto-update&quot;: new FormControl()
+		})
+	}
+
+	/**
+	 * @param {boolean} shouldAutoUpdate if new updates should be automatically
+	 * downloaded and installed.
+	 */
+	setAutoUpdate(shouldAutoUpdate: boolean) {
+		//appSettingsStore.set(Settings.AUTO_UPDATE, shouldAutoUpdate)
+	}
+
+	installFishTerminal() {
+		this.commandRunnerService.runCommandAsUser(&quot;which fish&quot;)
+			.then((result) &#x3D;&gt; console.log(result))
+			.catch((result) &#x3D;&gt; console.log(result))
+	}
+
+	installPowerShell() {
+		this.commandRunnerService.runCommandAsUser(&quot;which powershell&quot;)
+			.then((result) &#x3D;&gt; {
+				console.log(result)
+				this.powershellInstallStatusLabel &#x3D; &quot;Uninstall Powershell&quot;
+			})
+			.catch((reason) &#x3D;&gt; {
+				console.log(reason)
+				this.powershellInstallStatusLabel &#x3D; reason
+			})
+	}
+
+	/**
+	 * Install or remove the Powerline font collection based
+	 * on if they are already installed
+	 * */
+	async handleFontInstallationOrRemoval() {
+		// if the fonts are not installed
+		if(!this.doesFontsDirectoryExist) {
+			try {
+				await this.commandRunnerService.runCommandAsUser(&#x60;cd ${ locations.FONTS_DIRECTORY } &amp;&amp; git clone https://github.com/powerline/fonts.git --depth&#x3D;1 &amp;&amp; bash ./install.sh&#x60;)
+				// update the button text to reflect the new status
+				this.installFontsButtonLabel &#x3D; &quot;Uninstall&quot;
+			}
+			catch (e) {
+				alert(e)
+			}
+		}
+		// if the fonts are installed
+		else {
+			try {
+				await this.commandRunnerService.runCommandAsUser(&#x60;cd ${ locations.FONTS_DIRECTORY } &amp;&amp; git clone https://github.com/powerline/fonts.git --depth&#x3D;1 &amp;&amp; bash ./uninstall.sh&#x60;)
+				// update the button text to reflect the new status
+				this.installFontsButtonLabel &#x3D; &quot;Install&quot;
+			}
+			catch (e) {
+				alert(e)
+			}
+		}
+}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;form-group&quot; [formGroup]&#x3D;&quot;miscSettingsForm&quot;&gt;
+
+	&lt;div class&#x3D;&quot;row row-cols-3 mt-3 mb-3&quot;&gt;
+		&lt;!-- install powershell --&gt;
+		&lt;div class&#x3D;&quot;col&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label text-white&quot;&gt;{{ powershellInstallStatusLabel }}&lt;/label&gt;
+			&lt;button class&#x3D;&quot;btn btn-sm&quot; (click)&#x3D;&quot;installPowerShell()&quot;&gt;
+				&lt;i class&#x3D;&quot;bi bi-terminal&quot;&gt;&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+
+		&lt;!-- install fish --&gt;
+		&lt;div class&#x3D;&quot;col&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label text-white&quot;&gt;{{ fishInstallStatusLabel }}&lt;/label&gt;
+			&lt;button class&#x3D;&quot;btn btn-sm&quot; (click)&#x3D;&quot;installFishTerminal()&quot;&gt;
+				&lt;i class&#x3D;&quot;bi bi-terminal&quot;&gt;&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+
+		&lt;!-- install or remove fonts --&gt;
+		&lt;div class&#x3D;&quot;col&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label text-white&quot;&gt;{{ installFontsButtonLabel }} PowerLine Fonts&lt;/label&gt;
+			&lt;button class&#x3D;&quot;btn btn-sm&quot; (click)&#x3D;&quot;handleFontInstallationOrRemoval()&quot;&gt;
+				&lt;i class&#x3D;&quot;bi bi-pencil-fill&quot;&gt;&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;row&quot;&gt;
+		&lt;!-- auto update --&gt;
+		&lt;div class&#x3D;&quot;col&quot;&gt;
+			&lt;div class&#x3D;&quot;form-check&quot;&gt;
+				&lt;input class&#x3D;&quot;form-check-input&quot;
+				       formControlName&#x3D;&quot;auto-update&quot;
+				       type&#x3D;&quot;checkbox&quot;
+				       [value]&#x3D;&quot;autoUpdateEnabled&quot;
+				       (change)&#x3D;&quot;setAutoUpdate(miscSettingsForm.get(&#x27;auto-update&#x27;).value)&quot;
+				&gt;
+				&lt;label class&#x3D;&quot;form-label text-white&quot;&gt;Auto Update&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="form-group" [formGroup]="miscSettingsForm">	<div class="row row-cols-3 mt-3 mb-3">		<!-- install powershell -->		<div class="col">			<label class="form-label text-white">{{ powershellInstallStatusLabel }}</label>			<button class="btn btn-sm" (click)="installPowerShell()">				<i class="bi bi-terminal"></i>			</button>		</div>		<!-- install fish -->		<div class="col">			<label class="form-label text-white">{{ fishInstallStatusLabel }}</label>			<button class="btn btn-sm" (click)="installFishTerminal()">				<i class="bi bi-terminal"></i>			</button>		</div>		<!-- install or remove fonts -->		<div class="col">			<label class="form-label text-white">{{ installFontsButtonLabel }} PowerLine Fonts</label>			<button class="btn btn-sm" (click)="handleFontInstallationOrRemoval()">				<i class="bi bi-pencil-fill"></i>			</button>		</div>	</div>	<div class="row">		<!-- auto update -->		<div class="col">			<div class="form-check">				<input class="form-check-input"				       formControlName="auto-update"				       type="checkbox"				       [value]="autoUpdateEnabled"				       (change)="setAutoUpdate(miscSettingsForm.get(\'auto-update\').value)"				>				<label class="form-label text-white">Auto Update</label>			</div>		</div>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AdvancedComponent', 'selector': 'ng-xterm-advanced-settings'},{'name': 'AppComponent', 'selector': 'ng-xterm-root'},{'name': 'AppTopbarComponent', 'selector': 'ng-xterm-app-topbar'},{'name': 'BackgroundSettingsComponent', 'selector': 'ng-xterm-background-settings'},{'name': 'CursorComponent', 'selector': 'ng-xterm-cursor-settings'},{'name': 'ForegroundComponent', 'selector': 'ng-xterm-foreground-settings'},{'name': 'GeneralSettingsComponent', 'selector': 'ng-xterm-terminal-settings'},{'name': 'MiscSettingsComponent', 'selector': 'ng-xterm-misc-settings'},{'name': 'SettingsComponent', 'selector': 'ng-xterm-settings'},{'name': 'SnippetsComponent', 'selector': 'ng-xterm-snippets'},{'name': 'SplitPanelComponent', 'selector': 'ng-xterm-split-panel'},{'name': 'TabsComponent', 'selector': 'ng-xterm-tabs'},{'name': 'TerminalComponent', 'selector': 'ng-xterm-terminal'},{'name': 'TopBarComponent', 'selector': 'ng-xterm-top-bar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MiscSettingsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MiscSettingsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
