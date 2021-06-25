@@ -12,11 +12,8 @@ As a Linux and Mac OS user (mostly Mac), I spend a lot of time at the terminal. 
 
 
 ## Adding and Removing Tab Panels
-![Alt Text](./panels.gif)
+![Alt Text](./panels-and-snippets.gif)
 
-
-## Using the Snippets Bar
-![Alt Text](./snippets.gif)
 
 ### Currently Versions:
 
