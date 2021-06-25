@@ -5,17 +5,17 @@
 ![img](./ng-xterm.png)
 
 
-
-
 As a Linux and Mac OS user (mostly Mac), I spend a lot of time at the terminal. While there are several amazing terminal emulators available such as **Hyper** and **iTerm2**, I wanted to build my own.
 
 ## Adding and Removing Tabs
 ![Alt Text](./tabs.gif)
 
-#Adding and Removing Tab Panels
+
+## Adding and Removing Tab Panels
 ![Alt Text](./panels.gif)
 
-#Using the Snippets Bar
+
+## Using the Snippets Bar
 ![Alt Text](./snippets.gif)
 
 ### Currently Versions:
