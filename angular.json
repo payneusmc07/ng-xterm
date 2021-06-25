@@ -48,7 +48,9 @@
 						"main": "src/main.ts",
 						"tsConfig": "src/tsconfig.app.json",
 						"polyfills": "src/polyfills.ts",
-						"styles": [ "src/styles/styles.scss", "src/styles/terminal-searchbar.scss"],
+						"styles": [
+							"src/styles/styles.scss"
+						],
 						"scripts": [],
 						"customWebpackConfig": {
 							"path": "./webpack.config.ts"
@@ -59,7 +61,9 @@
 							"aot": true,
 							"allowedCommonJsDependencies": [
 								"electron-store",
-								"xterm-addon-ligatures"
+								"execa",
+								"fs-extra",
+								"electron-update"
 							],
 							"sourceMap": true,
 							"verbose": false,
@@ -82,7 +86,9 @@
 							"sourceMap": false,
 							"allowedCommonJsDependencies": [
 								"electron-store",
-								"xterm-addon-ligatures"
+								"execa",
+								"fs-extra",
+								"electron-update"
 							],
 							"namedChunks": false,
 							"progress": true,
@@ -103,16 +109,17 @@
 				"serve": {
 					"builder": "@angular-builders/custom-webpack:dev-server",
 					"options": {
-						"browserTarget": "ng-xterm:build"
+						"browserTarget": "ng-xterm:build",
+						"progress": true
 					},
 					"configurations": {
 						"dev": {
 							"browserTarget": "ng-xterm:build:dev",
 							"liveReload": true
+
 						},
 						"production": {
-							"browserTarget": "ng-xterm:build:production",
-							"liveReload": true
+							"browserTarget": "ng-xterm:build:production"
 						}
 					}
 				}

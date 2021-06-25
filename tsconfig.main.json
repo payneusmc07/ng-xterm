@@ -1,34 +1,30 @@
 {
 	"compilerOptions": {
-		"sourceMap": false,
-		"declaration": false,
-		"moduleResolution": "node",
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"inlineSourceMap": true,
-		"incremental": true,
-		"esModuleInterop": true,
-		"pretty": true,
-		"skipLibCheck": true,
-		"resolveJsonModule": true,
-		"preserveConstEnums": true,
 		"target": "es5",
-		"baseUrl": "",
-		"types": [
-			"node"
-		],
+		"incremental": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"pretty": true,
+		"moduleResolution": "Node",
+		"preserveConstEnums": true,
+		"inlineSourceMap": true,
+		"esModuleInterop": true,
 		"lib": [
 			"es2017",
 			"es2016",
 			"es2015",
 			"dom"
-		]
+		],
+		"baseUrl": "tsconfig.index",
+		"paths": {
+			"@lib/*": ["./main/lib/*"],
+			"@shared/*": ["./src/shared"]
+		},
+		"types": []
 	},
-	"files": [
-		"main.ts"
-	],
-	"include": ["./lib/**/*.ts"],
-	"exclude": [
-		"node_modules",
+	"include": [
+		"./main.ts",
+		"./main-lib/**.ts"
 	]
 }
