@@ -276,10 +276,10 @@ export class TabSettingsComponent implements OnInit {
 ### A Big Thank You To
 
 * Vercel for giving us Hyper, which served as a large inspiration for this project.
-* maximegris of Github for the awesome boilerplate/starting template
 
-  [https://github.com/maximegris/angular-electron.git](https://github.com/maximegris/angular-electron.git)
+* maximegris of Github for the awesome boilerplate/starting template
+* [https://github.com/maximegris/angular-electron.git](https://github.com/maximegris/angular-electron.git)
 
 * Google for the Angular platform.
-* And the Electron team for making such a powerful yet easy to use platform.
 
+* And the Electron team for making such a powerful yet easy to use platform.
